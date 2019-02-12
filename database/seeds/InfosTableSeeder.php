@@ -11,6 +11,6 @@ class InfosTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Info::class,1)->create();
     }
 }
