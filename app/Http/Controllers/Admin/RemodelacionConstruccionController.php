@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Info;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class InfoController extends Controller
+class RemodelacionConstruccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class InfoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Info  $info
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Info $info)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class InfoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Info  $info
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Info $info)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class InfoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Info  $info
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Info $info)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class InfoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Info  $info
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Info $info)
+    public function destroy($id)
     {
         //
     }

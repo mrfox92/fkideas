@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Retail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class RetailController extends Controller
+class RemodelacionConstruccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class RetailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Retail  $retail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Retail $retail)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class RetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Retail  $retail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Retail $retail)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class RetailController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Retail  $retail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Retail $retail)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class RetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Retail  $retail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Retail $retail)
+    public function destroy($id)
     {
         //
     }

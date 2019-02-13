@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\RemodelacionConstruccion;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class RemodelacionConstruccionController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class RemodelacionConstruccionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\RemodelacionConstruccion  $remodelacionConstruccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RemodelacionConstruccion $remodelacionConstruccion)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class RemodelacionConstruccionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\RemodelacionConstruccion  $remodelacionConstruccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(RemodelacionConstruccion $remodelacionConstruccion)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class RemodelacionConstruccionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\RemodelacionConstruccion  $remodelacionConstruccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RemodelacionConstruccion $remodelacionConstruccion)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class RemodelacionConstruccionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\RemodelacionConstruccion  $remodelacionConstruccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RemodelacionConstruccion $remodelacionConstruccion)
+    public function destroy($id)
     {
         //
     }
