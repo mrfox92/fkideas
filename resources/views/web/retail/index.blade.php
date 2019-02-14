@@ -30,10 +30,131 @@
     </div>
 </section>
 <section class="container-fluid pt-4 pb-4 rgba-dark-light">
+<article class="container-fluid article-services-muebleria">
+    <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
+    <BR>
+    <div class="row d-flex justify-content-center align-items-center">
+        <!-- info mueblería retail -->
+        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-muebleria texto-muebleria">
+                <i class="h1-responsive fas fa-tools mt-5 mb-5"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-3" id="titulo-muebleria">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Mueblería Retail</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-3" id="texto-muebleria">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info mueblería retail -->
+        <!-- info logo vollumétrico -->
+        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-logo-volumetrico texto-logo-volumetrico">
+                <i class="h1-responsive fas fa-cube mt-5 mb-5"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse" id="titulo-logo-volumetrico">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Logo Volumétrico</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse" id="texto-logo-volumetrico">
+                    <div class="card-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info logo vollumétrico -->
+        <!-- info Acrílico y vidrio -->
+        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-acrilico-vidrio texto-acrilico-vidrio">
+                <i class="h1-responsive fas fa-table mt-5 mb-5"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-1" id="titulo-acrilico-vidrio">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Acrílico y Vidrio</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-1" id="texto-acrilico-vidrio">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info Acrílico y vidrio -->
+        <!-- info Acero inoxidable -->
+        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-acero texto-acero">
+                <i class="h1-responsive fas fa-shield-alt mt-5 mb-5"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-2" id="titulo-acero">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Acero Inoxidable</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-2" id="texto-acero">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info Acero inoxidable -->
+        <!-- info Remodelación de locales -->
+        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-4" aria-expanded="false" aria-controls="titulo-store texto-store">
+                <i class="h1-responsive fas fa-store-alt mt-5 mb-5"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-4" id="titulo-store">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Remodelación de locales</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-4" id="texto-store">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info Remodelación de locales -->
+    </div> 
+</article>
 <!-- card content retail -->
 <div class="row mt-5 mb-5">
     <div class="col-md-12">
-        <h2 class="h1-responsive text-center font-weight-bold wow fadeInUp">Últimos trabajos realizados</h2>
+        <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
 <div class="row ">
