@@ -17,6 +17,13 @@
 Auth::routes();
 
 Route::get('/', 'Web\HomeController@index')->name('inicio');
+//Web routes
+Route::get('servicio-muebleria-retail', 'Web\MuebleriaRetailController@index')->name('muebleria_retail');
+Route::get('servicio-aseo-industrial', 'Web\AseoIndustrialController@index')->name('aseo_industrial');
+Route::get('servicio-remodelacion-y-construccion', 'Web\RemodelacionConstruccionController@index')
+    ->name('remodelacion_construccion');
+Route::get('nosotros', 'Web\NosotrosController@index')->name('nosotros');
+Route::get('contacto', 'Web\ContactoController@index')->name('contacto');
 
 //routes permisssions
 
@@ -113,11 +120,7 @@ Route::middleware(['auth'])->group(function(){
         ->middleware('permission:remodelacion_construccion.destroy');
 });
 
-//Web routes
-Route::get('muebleria-retail', 'Web\RetailController@index')->name('muebleria-retail');
-Route::get('remodelacion-construccion', 'Web\RemodelacionContruccion@index')
-    ->name('remodelacion-construccion');
-Route::get('aseo-industrial', 'Web\Controller@index')->name('aseo-industrial');
+
 
 Route::middleware(['auth'])->group(function(){
     Route::resource('usuarios', 'Admin\UserController')->only('index')

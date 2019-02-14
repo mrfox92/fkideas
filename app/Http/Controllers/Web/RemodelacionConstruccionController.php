@@ -14,7 +14,7 @@ class RemodelacionConstruccionController extends Controller
      */
     public function index()
     {
-        //
+        return view('web.remodelacion_construccion.index');
     }
 
     /**

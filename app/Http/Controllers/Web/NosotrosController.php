@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class AseoIndustrialController extends Controller
+class NosotrosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AseoIndustrialController extends Controller
      */
     public function index()
     {
-        return view('web.aseo_industrial.index');
+        return view('web.nosotros.index');
     }
 
     /**

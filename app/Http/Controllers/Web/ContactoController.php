@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class RetailController extends Controller
+class ContactoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RetailController extends Controller
      */
     public function index()
     {
-        //
+        return view('web.contacto.index');
     }
 
     /**

@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
+    <!-- Fancybox css -->
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
 </head>
 <body>
     <div id="app">
@@ -44,28 +46,29 @@
                     <ul class="navbar-nav mr-auto">
                         <!-- Authentication Links -->
                         @guest
+                            
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('muebleria_retail') }}">
                                    Mueblería retail
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('aseo_industrial') }}">
                                     Aseo industrial
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('remodelacion_construccion') }}">
                                     Remodelación y construcción
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('nosotros') }}">
                                     Nosotros
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('contacto') }}">
                                     Contacto
                                 </a>
                             </li>
@@ -122,7 +125,126 @@
         <main class="py-0">
             @yield('content')
         </main>
+        <!-- Footer -->
+    <footer class="page-footer font-small bg-footer pt-4">
+
+<!-- Footer Links -->
+<div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+            <ul class="list-unstyled text-center">
+                <li>
+                    <a href="#!">Link 1</a>
+                </li>
+                <li>
+                    <a href="#!">Link 2</a>
+                </li>
+                <li>
+                    <a href="#!">Link 3</a>
+                </li>
+                <li>
+                    <a href="#!">Link 4</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+            <ul class="list-unstyled text-center">
+                <li>
+                    <a href="#!">Link 1</a>
+                </li>
+                <li>
+                    <a href="#!">Link 2</a>
+                </li>
+                <li>
+                    <a href="#!">Link 3</a>
+                </li>
+                <li>
+                    <a href="#!">Link 4</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+            <ul class="list-unstyled text-center">
+                <li>
+                    <a href="#!">Link 1</a>
+                </li>
+                <li>
+                    <a href="#!">Link 2</a>
+                </li>
+                <li>
+                    <a href="#!">Link 3</a>
+                </li>
+                <li>
+                    <a href="#!">Link 4</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+            <ul class="list-unstyled text-center">
+                <li>
+                    <a href="#!">Link 1</a>
+                </li>
+                <li>
+                    <a href="#!">Link 2</a>
+                </li>
+                <li>
+                    <a href="#!">Link 3</a>
+                </li>
+                <li>
+                    <a href="#!">Link 4</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Grid column -->
+
     </div>
+    <!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3 text-white font-weight-bold">Todos los derechos reservados © FKideas 2019
+</div>
+<!-- Copyright -->
+
+</footer>
+    </div>
+    <!-- Footer --> 
     <!-- JQuery -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <!-- Bootstrap tooltips -->
@@ -131,6 +253,7 @@
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- MDB core JavaScript -->
     <script src="{{ asset('js/mdb.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
     <script>
         wow = new WOW().init();
     </script>

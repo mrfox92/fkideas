@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class AseoIndustrialController extends Controller
+use App\Retail;
+
+class MuebleriaRetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class AseoIndustrialController extends Controller
      */
     public function index()
     {
-        return view('web.aseo_industrial.index');
+        $retailers = Retail::orderBy('id', 'DESC')->where('status', 'PUBLICADO')->paginate(6);
+        return view('web.retail.index', compact('retailers'));
     }
 
     /**
