@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\AseoIndustrial;
+
 class AseoIndustrialController extends Controller
 {
     /**
@@ -14,7 +16,10 @@ class AseoIndustrialController extends Controller
      */
     public function index()
     {
-        return view('web.aseo_industrial.index');
+        $aseos_industriales = AseoIndustrial::orderBy('id', 'DESC')
+            ->where('status', 'PUBLICADO')
+            ->paginate(6);
+        return view('web.aseo_industrial.index', compact('aseos_industriales'));
     }
 
     /**
