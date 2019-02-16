@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <style>
-.parallax-muebleria-bg {
+.parallax-remodelacion-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -10,8 +10,8 @@
     margin-top: 0px !important;
 }
 </style>
-<!-- sección mueblería retail -->
-<section class="view parallax-muebleria-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
+<!-- sección remodelación y construcción -->
+<section class="view parallax-remodelacion-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
@@ -30,82 +30,109 @@
     </div>
 </section>
 <section class="container-fluid pt-4 pb-4 rgba-dark-light">
+<!-- servicios remodelación y construcción -->
 <article class="container-fluid servicios-remodelacion-construccion">
     <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Remodelación y Construcción</h2>
     <BR>
-    <div class="row d-flex d-flex justify-content-around">
-        <!-- info aseo industrial -->
-        <div class="card col-md-4 mt-3 mb-3 wow fadeInUp d-flex d-flex justify-content-around">
-            <i class="text-center card-img-top h1-responsive fas fa-rocket mt-5 mb-5"></i>
-            <div class="card-header text-center">
-                <a class="btn btn-link" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
-                    <h2 class="h2-responsive">Activaciones de Marca</h2>
-                </a>
-            </div>
-            <div class="collapse" id="collapse-1">
-                <div class="card-body">
-                    <p class="text-justify">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </p>
-                </div>
-            </div>
+    <div class="row d-flex justify-content-center align-items-center">
+        <!-- info marca -->
+        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-1 texto-1">
+                <i class="h1-responsive fas fa-rocket mt-5 mb-5"></i>
+            </a>
         </div>
-        <!-- info aseo industrial -->
-        <!-- info Lavado pisos -->
-        <div class="card col-md-4 mt-3 mb-3 wow fadeInUp d-flex justify-content-around">
-            <i class="text-center card-img-top h1-responsive fas fa-rss mt-5 mb-5"></i>
-            <div class="card-header text-center">
-                <a class="btn btn-link" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
-                    <h2 class="h2-responsive">Marketing Digital</h2>
-                </a>
-            </div>
-            <div class="collapse" id="collapse-2">
-                <div class="card-body">
-                    <p class="text-justify">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </p>
-                </div>
-            </div>
+        <!-- info marca -->
+        <!-- info marketing digital -->
+        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-2 texto-2">
+                <i class="h1-responsive fas fa-rss mt-5 mb-5"></i>
+            </a>
         </div>
-        <!-- info Lavado pisos -->
-    </div>
-    <div class="row d-flex d-flex justify-content-around">
-        <!-- info Lavado alfombras -->
-        <div class="card col-md-4 mt-5 mb-5 wow fadeInUp d-flex d-flex justify-content-around">
-            <i class="text-center card-img-top h1-responsive fas fa-star-half-alt mt-5 mb-5"></i>
-            <div class="card-header text-center">
-                <a class="btn btn-link" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
-                    <h2 class="h2-responsive">Producción de Eventos</h2>
-                </a>
-            </div>
-            <div class="collapse" id="collapse-3">
-                <div class="card-body">
-                    <p class="text-justify">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </p>
-                </div>
-            </div>
+        <!-- info marketing digital -->
+        <!-- info eventos -->
+        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-3 texto-3">
+                <i class="h1-responsive fas fa-star-half-alt mt-5 mb-5"></i>
+            </a>
         </div>
-        <!-- info Lavado alfombras -->
-        <!-- info Tratamiento especial pisos -->
-        <div class="card col-md-4 mt-5 mb-5 wow fadeInUp d-flex d-flex justify-content-around">
-            <i class="text-center card-img-top h1-responsive fas fa-laptop-code mt-5 mb-5"></i>
-            <div class="card-header text-center">
-                <a class="btn btn-link" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
-                    <h2 class="h2-responsive">Diseño Gráfico y Web</h2>
-                </a>
-            </div>
-            <div class="collapse" id="collapse-4">
-                <div class="card-body">
-                    <p class="text-justify">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </p>
-                </div>
-            </div>
+        
+        <!-- info eventos -->
+        <!-- info diseño grafico y web -->
+        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-4 texto-4">
+                <i class="h1-responsive fas fa-laptop-code mt-5 mb-5"></i>
+            </a>
         </div>
-        <!-- info Tratamiento especial pisos -->
+        <!-- info diseño grafico y web -->
     </div> 
+        <!-- sección info desplegable íconos -->
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-3" id="titulo-1">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Activaciones de Marca</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-3" id="texto-1">
+                    <div class="card-body text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse" id="titulo-2">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Marketing Digital</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse" id="texto-2">
+                    <div class="card-body text-justify">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-1" id="titulo-3">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Producción de Eventos</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-1" id="texto-3">
+                    <div class="card-body text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-2" id="titulo-4">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Diseño Gráfico y Web</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-2" id="texto-4">
+                    <div class="card-body text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sección info desplegable íconos -->
 </article>
+<!-- servicios remodelación y construcción -->
 <div class="container-fluid">
 <!-- cards contenido remodelacion y construccion -->
 <div class="row mt-5 mb-5">
