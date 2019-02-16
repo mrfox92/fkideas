@@ -37,10 +37,21 @@
 }
 
 .article-services-muebleria i {
-    font-size: 10rem;
-    padding: 30px;
+    font-size: 10vw;
+    padding: 1.5vw;
     border: 1px solid rgba(56, 56, 56, 0.2);
     box-shadow: 2px 3px 2px rgb(22.2%, 22.2%, 22.2%);
     border-radius: 5%;
     cursor: pointer;
+}
+
+
+/* Estilos servicios  páginas principales*/
+
+.servicios-aseo-industrial i {
+    font-size: 10vw;
+}
+
+.servicios-remodelacion-construccion i {
+    font-size: 8vw;
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\RemodelacionConstruccion;
 class RemodelacionConstruccionController extends Controller
 {
     /**
@@ -14,7 +15,10 @@ class RemodelacionConstruccionController extends Controller
      */
     public function index()
     {
-        return view('web.remodelacion_construccion.index');
+        $remodelaciones_construcciones = RemodelacionConstruccion::orderBy('id', 'DESC')
+            ->where('status', 'PUBLICADO')
+            ->paginate(6);
+        return view('web.remodelacion_construccion.index', compact('remodelaciones_construcciones'));
     }
 
     /**

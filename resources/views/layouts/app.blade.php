@@ -103,12 +103,12 @@
                     </ul>
                     <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="https://www.facebook.com/fabrikideas/" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="https://www.instagram.com/fabrikideas.retail/" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>

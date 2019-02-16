@@ -22,150 +22,83 @@
             <div class="row d-flex justify-content-center align-items-center mb-4">
                 <div class="col-md-12">
                     <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        hola mundo,tenemos sueño.
+                        Equipo capacitado en limpieza industrial hacemos entregas de obra de alta calidad.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="container-fluid pt-4 pb-4 rgba-dark-light">
-<article class="container-fluid article-services-muebleria">
-    <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
+<section class="container-fluid">
+<article class="container-fluid servicios-aseo-industrial">
+    <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Aseo Industrial</h2>
     <BR>
-    <div class="row d-flex justify-content-center align-items-center">
-        <!-- info mueblería retail -->
-        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-muebleria texto-muebleria">
-                <i class="h1-responsive fas fa-tools mt-5 mb-5"></i>
-            </a>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-3" id="titulo-muebleria">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Mueblería Retail</h2>
-                    </div>
-                </div>
+    <div class="row d-flex d-flex justify-content-around">
+        <!-- info aseo industrial -->
+        <div class="card col-md-4 mt-3 mb-3 wow fadeInUp d-flex d-flex justify-content-around">
+            <i class="text-center card-img-top h1-responsive far fa-check-circle mt-5 mb-5"></i>
+            <div class="card-header">
+                <h2 class="h2-responsive text-center">Aseo Industrial</h2>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-3" id="texto-muebleria">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-        <!-- info mueblería retail -->
-        <!-- info logo vollumétrico -->
-        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-logo-volumetrico texto-logo-volumetrico">
-                <i class="h1-responsive fas fa-cube mt-5 mb-5"></i>
-            </a>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse" id="titulo-logo-volumetrico">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Logo Volumétrico</h2>
-                    </div>
-                </div>
+        <!-- info aseo industrial -->
+        <!-- info Lavado pisos -->
+        <div class="card col-md-4 mt-3 mb-3 wow fadeInUp d-flex justify-content-around">
+            <i class="text-center card-img-top h1-responsive fas fa-broom mt-5 mb-5"></i>
+            <div class="card-header">
+                <h2 class="h2-responsive text-center">Lavado de Pisos</h2>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse" id="texto-logo-volumetrico">
-                    <div class="card-body">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
-                    </div>
-                </div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-        <!-- info logo vollumétrico -->
-        <!-- info Acrílico y vidrio -->
-        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-acrilico-vidrio texto-acrilico-vidrio">
-                <i class="h1-responsive fas fa-table mt-5 mb-5"></i>
-            </a>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-1" id="titulo-acrilico-vidrio">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Acrílico y Vidrio</h2>
-                    </div>
-                </div>
+        <!-- info Lavado pisos -->
+    </div>
+    <div class="row d-flex d-flex justify-content-around">
+        <!-- info Lavado alfombras -->
+        <div class="card col-md-4 mt-5 mb-5 wow fadeInUp d-flex d-flex justify-content-around">
+            <i class="text-center card-img-top h1-responsive fas fa-square-full mt-5 mb-5"></i>
+            <div class="card-header">
+                <h2 class="h2-responsive text-center">Lavado de Alfombras</h2>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-1" id="texto-acrilico-vidrio">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-        <!-- info Acrílico y vidrio -->
-        <!-- info Acero inoxidable -->
-        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-acero texto-acero">
-                <i class="h1-responsive fas fa-shield-alt mt-5 mb-5"></i>
-            </a>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-2" id="titulo-acero">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Acero Inoxidable</h2>
-                    </div>
-                </div>
+        <!-- info Lavado alfombras -->
+        <!-- info Tratamiento especial pisos -->
+        <div class="card col-md-4 mt-5 mb-5 wow fadeInUp d-flex d-flex justify-content-around">
+            <i class="text-center card-img-top h1-responsive far fa-square mt-5 mb-5"></i>
+            <div class="card-header">
+                <h2 class="h2-responsive text-center">Tratamiento Especial de Pisos</h2>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-2" id="texto-acero">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-        <!-- info Acero inoxidable -->
-        <!-- info Remodelación de locales -->
-        <div class="col-md-12 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse-4" aria-expanded="false" aria-controls="titulo-store texto-store">
-                <i class="h1-responsive fas fa-store-alt mt-5 mb-5"></i>
-            </a>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-4" id="titulo-store">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Remodelación de locales</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-4" id="texto-store">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- info Remodelación de locales -->
+        <!-- info Tratamiento especial pisos -->
     </div> 
 </article>
-<!-- card content retail -->
+
+<div class="container-fluid">
+<!-- cards contenido aseo industrial -->
 <div class="row mt-5 mb-5">
     <div class="col-md-12">
         <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
-<div class="row ">
-    @foreach ( $retailers as $retail)
-    <div class="col-md-4 mt-4 mb-5">
-        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset($retail->file) }});">
+<div class="row">
+    @foreach ( $aseos_industriales as $aseo_industrial)
+    <div class="col-lg-4 col-md-6 mt-4 mb-5">
+        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset($aseo_industrial->file) }});">
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
-                    <h3 class="h3-responsive card-title pt-2"><strong>{{ $retail->title }}</strong></h3>
-                    <p>{{ $retail->excerpt }}</p>
-                    <a data-fancybox="gallery" data-caption="{{ $retail->excerpt }}" class="btn btn-pink" href="{{ asset( $retail->file ) }}"><i class="fas fa-clone left"></i> Ver más
+                    <h3 class="h3-responsive card-title pt-2"><strong>{{ $aseo_industrial->title }}</strong></h3>
+                    <p>{{ $aseo_industrial->excerpt }}</p>
+                    <a data-fancybox="gallery" data-caption="{{ $aseo_industrial->description }}" class="btn btn-pink" href="{{ asset( $aseo_industrial->file ) }}"><i class="fas fa-clone left"></i> Ver más
                     </a>
                 </div>
             </div>
@@ -175,10 +108,11 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        {{ $retailers->render() }}
+        {{ $aseos_industriales->render() }}
     </div>
 </div>
 <!-- card content retail -->
+</div>
 
 <!-- clients -->
 
