@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <style>
-.parallax-aseo-industrial-bg {
+.parallax-aseo-industrial-bg,
+.parallax-contacto-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -168,5 +169,44 @@
 <!-- clients -->
 
 <!-- clients -->
+</section>
+<!-- sección formulario de contacto -->
+<section class="view parallax-contacto-bg" style="background-image: url({{ asset('storage/images/aseo-industrial.jpg')}});">
+    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
+        <div class="container wow fadeInUp">
+            <div class="row d-flex justify-content-center align-items-center">
+                <!-- Formulario contacto -->
+                <div class="col-md-6 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h3-responsive text-center blue-text font-weight-bold">Contáctanos</h3>
+                            <hr>
+                            <form>
+                                <div class="md-form">
+                                    <i class="fa fa-user prefix blue-text"></i>
+                                    <input class="form-control" type="text" id="nombre">
+                                    <label for="nombre">Nombre:</label>
+                                </div>
+                                <div class="md-form">
+                                    <i class="fa fa-envelope prefix blue-text"></i>
+                                    <input class="form-control" type="email" id="email">
+                                    <label for="email">Email:</label>
+                                </div>
+                                <div class="md-form">
+                                    <i class="fas fa-edit prefix blue-text"></i>
+                                    <textarea class="md-textarea" id="texto"></textarea>
+                                    <label for="texto">Ingresa tu mensaje:</label>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-blue">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulario -->
+            </div>
+        </div>
+    </div>
 </section>
 @endsection

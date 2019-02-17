@@ -68,7 +68,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contacto') }}">
+                                <a href="" class="nav-link" data-toggle="modal" data-target="#modalContactForm">
                                     Contacto
                                 </a>
                             </li>
@@ -125,6 +125,56 @@
         <main class="py-0">
             @yield('content')
         </main>
+        <!-- modal contacto -->
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Contáctanos</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="name" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="name">Nombre</label>
+                    </div>
+                    
+                    <div class="md-form mb-5">
+                    <i class="fas fa-mobile-alt prefix grey-text"></i>
+                    <input type="number" id="contact_number" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="contact_number">N° contacto (opcional)</label>
+                    </div>
+                    
+                    <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="email" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="email">Email</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <input type="text" id="subject" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="subject">Motivo</label>
+                    </div>
+
+                    <div class="md-form">
+                    <i class="fas fa-pencil prefix grey-text"></i>
+                    <textarea type="text" id="message" class="md-textarea form-control" rows="4"></textarea>
+                    <label data-error="wrong" data-success="right" for="message">Ingresa tu mensaje</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-blue">Enviar <i class="fas fa-paper-plane-o ml-1"></i></button>
+                </div>
+                </div>
+            </div>
+            </div>
+        <!-- fin modal contacto -->
         <!-- Footer -->
     <footer class="page-footer font-small bg-footer pt-4">
 
