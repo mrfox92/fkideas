@@ -82,6 +82,18 @@
                             @endif
 
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('retail.index') }}">Muebleria retail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('aseo_industrial.index') }}">Aseo Industrial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('remodelacion_construccion.index') }}">Remodelación y Construcción</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('info.index') }}">Información Empresa</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -121,7 +133,37 @@
                 </div>
             </div>
         </nav>
-        
+
+        @if(session('info'))
+        <div class="container-fluid">
+        <br>
+            <div class="row d-flex justify-content-center align-item-center">
+                <div class="col-md-12">
+                    <div class="alert alert-success text-center">
+                        {{ session('info') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif  
+
+        @if(count($errors))
+        <div class="container-fluid">
+        <br>
+            <div class="row d-flex justify-content-center align-item-center">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <ul>
+                        @foreach ( $errors->all() as $error )
+                        <li>{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        @endif
+
         <main class="py-0">
             @yield('content')
         </main>

@@ -7,7 +7,6 @@ $factory->define(App\Info::class, function (Faker $faker) {
     return [
         'user_id' => rand(1, 3),
         'title' => $title,
-        'slug' => str_slug( $title ),
         'description' => $faker->text(120),
         'email' => $faker->unique()->safeEmail,
         'contact_number' => '+569 12345678',

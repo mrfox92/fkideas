@@ -3,10 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RetailStoreRequest;
+use App\Http\Requests\RetailUpdateRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+
+use App\Retail;
 
 class RetailController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,9 @@ class RetailController extends Controller
      */
     public function index()
     {
-        //
+        $retailers = Retail::orderBy('id', 'DESC')->paginate(10);
+
+        return view('admin.retailers.index', compact('retailers'));
     }
 
     /**
@@ -24,7 +35,7 @@ class RetailController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.retailers.create');
     }
 
     /**
@@ -33,9 +44,18 @@ class RetailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RetailStoreRequest $request)
     {
-        //
+        $retail = Retail::create($request->all());
+
+        if ($request->file('file')) {
+            $path = Storage::disk('public')->putFile('storage/retailers', $request->file('file'));
+            $retail->fill(['file' => $path])->save();
+        }
+
+        return redirect()->route('retail.edit', $retail->id)
+            ->with('info', 'item mueblería retail creado con éxito');
+
     }
 
     /**
@@ -44,9 +64,9 @@ class RetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Retail $retail)
     {
-        //
+        return view('admin.retailers.show', compact('retail'));
     }
 
     /**
@@ -55,9 +75,9 @@ class RetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Retail $retail)
     {
-        //
+        return view('admin.retailers.edit', compact('retail'));
     }
 
     /**
@@ -67,9 +87,21 @@ class RetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RetailUpdateRequest $request, Retail $retail)
     {
-        //
+        $old_path = $retail->file;
+        $retail->fill($request->all())->save();
+        if($request->file('file')){
+            $path = Storage::disk('public')->putFile('storage/retailers', $request->file('file'));
+            $retail->fill(['file' => $path])->save();
+
+            if(file_exists($old_path)){
+                Storage::disk('public')->delete($old_path);
+            }
+        }
+
+        return redirect()->route('retail.edit', $retail->id)
+            ->with('info', 'La información ha sido actualizada con éxito');
     }
 
     /**
@@ -78,8 +110,12 @@ class RetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Retail $retail)
     {
-        //
+        if($retail->file){
+            Storage::disk('public')->delete($retail->file);
+        }
+        $retail->delete();
+        return back()->with('info', 'item eliminado con éxito');
     }
 }

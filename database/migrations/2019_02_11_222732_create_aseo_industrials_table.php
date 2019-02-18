@@ -16,8 +16,6 @@ class CreateAseoIndustrialsTable extends Migration
         Schema::create('aseo_industrials', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 128);
-            $table->string('slug', 128)->unique();
-            $table->mediumText('excerpt');
             $table->text('description');
             $table->string('location', 128);
             $table->enum('status', ['PUBLICADO', 'BORRADOR'])->default('BORRADOR');

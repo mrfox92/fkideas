@@ -16,7 +16,6 @@ class CreateInfosTable extends Migration
         Schema::create('infos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 128);
-            $table->string('slug')->unique();
             $table->text('description');
             $table->string('email', 128)->unique();
             $table->string('contact_number');

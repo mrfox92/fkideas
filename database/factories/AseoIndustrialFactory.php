@@ -7,8 +7,6 @@ $factory->define(App\AseoIndustrial::class, function (Faker $faker) {
     return [
         'user_id' => rand(1, 3),
         'title' => $title,
-        'slug' => str_slug($title),
-        'excerpt' => $faker->text(280),
         'description' => $faker->text(800),
         'location' => $faker->text(100),
         'status' => $faker->randomElement(['PUBLICADO', 'BORRADOR']),
