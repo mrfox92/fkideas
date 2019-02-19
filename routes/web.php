@@ -92,18 +92,12 @@ Route::middleware(['auth'])->group(function(){
     //info
     Route::get('gestion-informacion-empresa', 'Admin\InfoController@index')->name('info.index')
         ->middleware('permission:info.index');
-    Route::get('gestion-informacion-empresa/create', 'Admin\InfoController@create')->name('info.create')
-        ->middleware('permission:info.create');
-    Route::post('gestion-informacion-empresa/store', 'Admin\InfoController@store')->name('info.store')
-        ->middleware('permission:info.create');
     Route::get('gestion-informacion-empresa/{info}', 'Admin\InfoController@show')->name('info.show')
         ->middleware('permission:info.show');
     Route::get('gestion-informacion-empresa/{info}/edit', 'Admin\InfoController@edit')->name('info.edit')
         ->middleware('permission:info.edit');
     Route::put('gestion-informacion-empresa/{info}', 'Admin\InfoController@update')->name('info.update')
         ->middleware('permission:info.edit');
-    Route::delete('gestion-informacion-empresa/{info}', 'Admin\InfoController@destroy')->name('info.destroy')
-        ->middleware('permission:info.destroy');
     
     //Aseo industrial
     Route::get('gestion-aseo-industrial', 'Admin\AseoIndustrialController@index')->name('aseo_industrial.index')

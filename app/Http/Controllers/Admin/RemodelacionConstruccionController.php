@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RemodelacionConstruccionStoreRequest;
+use App\Http\Requests\RemodelacionConstruccionUpdateRequest;
+use Illuminate\Support\Facades\Storage;
+
+use App\RemodelacionConstruccion;
 
 class RemodelacionConstruccionController extends Controller
 {
@@ -14,7 +19,8 @@ class RemodelacionConstruccionController extends Controller
      */
     public function index()
     {
-        //
+        $remodelaciones_construcciones = RemodelacionConstruccion::orderBy('id', 'DESC')->paginate(10);
+        return view('admin.remodelaciones_construcciones.index', compact('remodelaciones_construcciones'));
     }
 
     /**
@@ -24,7 +30,7 @@ class RemodelacionConstruccionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.remodelaciones_construcciones.create');
     }
 
     /**
@@ -33,9 +39,17 @@ class RemodelacionConstruccionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RemodelacionConstruccionStoreRequest $request)
     {
-        //
+        $remodelacion = RemodelacionConstruccion::create($request->all());
+
+        if ($request->file('file')) {
+            $path = Storage::disk('public')->putFile('storage/remodelaciones_construcciones', $request->file('file'));
+            $remodelacion->fill(['file' => $path])->save();
+        }
+
+        return redirect()->route('remodelacion_construccion.edit', $remodelacion->id)
+            ->with('info', 'item remodelación y construcción creado con éxito');
     }
 
     /**
@@ -44,9 +58,9 @@ class RemodelacionConstruccionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(RemodelacionConstruccion $remodelacion)
     {
-        //
+        return view('admin.remodelaciones_construcciones.show', compact('remodelacion'));
     }
 
     /**
@@ -55,9 +69,9 @@ class RemodelacionConstruccionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(RemodelacionConstruccion $remodelacion)
     {
-        //
+        return view('admin.remodelaciones_construcciones.edit', compact('remodelacion'));
     }
 
     /**
@@ -67,9 +81,21 @@ class RemodelacionConstruccionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RemodelacionConstruccionUpdateRequest $request, RemodelacionConstruccion $remodelacion)
     {
-        //
+        $old_path = $remodelacion->file;
+        $remodelacion->fill($request->all())->save();
+        if($request->file('file')){
+            $path = Storage::disk('public')->putFile('storage/remodelaciones_construcciones', $request->file('file'));
+            $remodelacion->fill(['file' => $path])->save();
+
+            if(file_exists($old_path)){
+                Storage::disk('public')->delete($old_path);
+            }
+        }
+
+        return redirect()->route('remodelacion_construccion.edit', $remodelacion->id)
+            ->with('info', 'La información ha sido actualizada con éxito');
     }
 
     /**
@@ -78,8 +104,12 @@ class RemodelacionConstruccionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(RemodelacionConstruccion $remodelacion)
     {
-        //
+        if($remodelacion->file){
+            Storage::disk('public')->delete($remodelacion->file);
+        }
+        $remodelacion->delete();
+        return back()->with('info', 'item eliminado con éxito');
     }
 }

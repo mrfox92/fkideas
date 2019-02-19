@@ -27,12 +27,10 @@
                     <div class="container text-center wow fadeIn">
                         <div class="row d-flex justify-content-center align-items-center">
                             <div class="col-md-12 col-lg-6 text-white">
-                                <h2 class="h1-responsive font-weight-bold text-left">Diseño y Construcción S.P.A</h2>
+                                <h2 class="h1-responsive font-weight-bold text-left">{{ $info->title }}</h2>
                                 <br>
                                 <p class="h5-responsive text-justify">
-                                    Creamos experiencias únicas en tus ambientes. Somos especialistas
-                                    en proyectos mobiliarios, te ofrecemos la mejor opción según
-                                    tus necesidades.
+                                    {{ $info->description }}
                                 </p>
                                 <div class="text-left mt-4">
                                     <a href="{{ route('nosotros') }}" class="btn btn-outline-white btn-lg">Ver más

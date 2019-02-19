@@ -17,6 +17,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -134,36 +135,6 @@
             </div>
         </nav>
 
-        @if(session('info'))
-        <div class="container-fluid">
-        <br>
-            <div class="row d-flex justify-content-center align-item-center">
-                <div class="col-md-12">
-                    <div class="alert alert-success text-center">
-                        {{ session('info') }}
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endif  
-
-        @if(count($errors))
-        <div class="container-fluid">
-        <br>
-            <div class="row d-flex justify-content-center align-item-center">
-                <div class="col-md-12">
-                    <div class="alert alert-danger">
-                        <ul>
-                        @foreach ( $errors->all() as $error )
-                        <li>{{ $error }}</li>
-                        @endforeach
-                        </ul>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        @endif
-
         <main class="py-0">
             @yield('content')
         </main>
@@ -217,126 +188,125 @@
             </div>
             </div>
         <!-- fin modal contacto -->
-        <!-- Footer -->
-    <footer class="page-footer font-small bg-footer pt-4">
+<!-- Footer -->
+<footer class="page-footer font-small bg-footer pt-4">
 
-<!-- Footer Links -->
-<div class="container-fluid text-center text-md-left">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
 
-            <!-- Links -->
-            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+                <!-- Links -->
+                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
 
-            <ul class="list-unstyled text-center">
-                <li>
-                    <a href="#!">Link 1</a>
-                </li>
-                <li>
-                    <a href="#!">Link 2</a>
-                </li>
-                <li>
-                    <a href="#!">Link 3</a>
-                </li>
-                <li>
-                    <a href="#!">Link 4</a>
-                </li>
-            </ul>
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
 
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-            <ul class="list-unstyled text-center">
-                <li>
-                    <a href="#!">Link 1</a>
-                </li>
-                <li>
-                    <a href="#!">Link 2</a>
-                </li>
-                <li>
-                    <a href="#!">Link 3</a>
-                </li>
-                <li>
-                    <a href="#!">Link 4</a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-            <ul class="list-unstyled text-center">
-                <li>
-                    <a href="#!">Link 1</a>
-                </li>
-                <li>
-                    <a href="#!">Link 2</a>
-                </li>
-                <li>
-                    <a href="#!">Link 3</a>
-                </li>
-                <li>
-                    <a href="#!">Link 4</a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-            <ul class="list-unstyled text-center">
-                <li>
-                    <a href="#!">Link 1</a>
-                </li>
-                <li>
-                    <a href="#!">Link 2</a>
-                </li>
-                <li>
-                    <a href="#!">Link 3</a>
-                </li>
-                <li>
-                    <a href="#!">Link 4</a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- Grid column -->
+        <!-- Grid row -->
 
     </div>
-    <!-- Grid row -->
+    <!-- Footer Links -->
 
-</div>
-<!-- Footer Links -->
-
-<!-- Copyright -->
-<div class="footer-copyright text-center py-3 text-white font-weight-bold">Todos los derechos reservados © FKideas 2019
-</div>
-<!-- Copyright -->
-
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white font-weight-bold">Todos los derechos reservados © FKideas 2019
+    </div>
+    <!-- Copyright -->
 </footer>
+<!-- Footer -->
     </div>
-    <!-- Footer --> 
     <!-- JQuery -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <!-- Bootstrap tooltips -->

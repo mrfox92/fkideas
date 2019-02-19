@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Info;
 class HomeController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('web.inicio');
+        $info = Info::orderBy('id', 'ASC')->first();
+        return view('web.inicio', compact('info'));
     }
 
     /**
@@ -24,7 +25,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

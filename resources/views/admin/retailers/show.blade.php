@@ -1,6 +1,10 @@
+@section('styles')
+<!-- content style -->
+<link rel="stylesheet" href="{{ asset('css/content.css') }}">
+@endsection
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid content-retail">
     <div class="jumbotron mt-5 bg-info">
         <header>
             <h2 class="h1-responsive text-center">Detalle trabajo mueblería retail</h2>

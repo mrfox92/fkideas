@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\InfoUpdateRequest;
 use App\Http\Controllers\Controller;
+
+use App\Info;
 
 class InfoController extends Controller
 {
@@ -14,28 +17,9 @@ class InfoController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $informacion_empresa = Info::orderBy('id', 'DESC')->paginate(10);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('admin.informaciones_empresa.index', compact('informacion_empresa'));
     }
 
     /**
@@ -44,9 +28,9 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Info $info)
     {
-        //
+        return view('admin.informaciones_empresa.show', compact('info'));
     }
 
     /**
@@ -55,9 +39,9 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Info $info)
     {
-        //
+        return view('admin.informaciones_empresa.edit', compact('info'));
     }
 
     /**
@@ -67,19 +51,11 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(InfoUpdateRequest $request, Info $info)
     {
-        //
-    }
+        $info->fill($request->all())->save();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return redirect()->route('info.edit', $info->id)
+            ->with('info', 'La información ha sido actualizada con éxito');
     }
 }
