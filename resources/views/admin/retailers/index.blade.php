@@ -39,7 +39,9 @@
         <div class="col-md-10">
             <div class="card mt-4 mb-5">
                 <div class="card-header">
+                    @can('retail.create')
                     <a class="btn btn-primary float-right" href="{{ route('retail.create') }}">Crear nuevo</a>
+                    @endcan
                 </div>
                 <div class="card-body">
                     <table class="table table-stripped table-hover table-responsive-sm">
@@ -59,11 +61,17 @@
                                 <td class="d-none d-lg-table-cell">{{ $retail->location }}</td>
                                 <td class="text-lowercase">{{ $retail->status }}</td>
                                 <td>
+                                    @can('retail.show')
                                     <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('retail.show', $retail->id) }}" title="Ver detalle">Ver</a>
+                                    @endcan
+                                    @can('retail.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('retail.edit', $retail->id) }}" title="Editar información">Editar</a>
+                                    @endcan  
+                                    @can('retail.destroy')
                                     {!! Form::open(['route' => ['retail.destroy', $retail->id], 'method' => 'DELETE']) !!}
-                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block mt-2 mb-2', 'title' => 'Eliminar']) !!}
+                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}
                                     {!! Form::close() !!}
+                                    @endcan
                                 </td>
                             </tr>
                             @endforeach    

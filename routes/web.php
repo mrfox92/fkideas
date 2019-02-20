@@ -51,7 +51,7 @@ Route::middleware(['auth'])->group(function(){
         ->middleware('permission:roles.index');
     Route::get('roles/create', 'Admin\RoleController@create')->name('roles.create')
         ->middleware('permission:roles.create');
-    Route::post('roles/store', 'Admin\RoleController@store')->name('roles.create')
+    Route::post('roles/store', 'Admin\RoleController@store')->name('roles.store')
         ->middleware('permission:roles.create');
     Route::get('roles/{role}', 'Admin\RoleController@show')->name('roles.show')
         ->middleware('permission:roles.show');

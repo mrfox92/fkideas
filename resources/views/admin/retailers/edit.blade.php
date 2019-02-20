@@ -6,7 +6,7 @@
 @section('content')
 <div class="container-fluid content-retail">
 <div class="jumbotron bg-info">
-    <h2 class="h1-responsive text-center" >Editar proyecto mueblerÃ­a retail</h2>
+    <h2 class="h1-responsive text-center" >Editar proyecto mueblería retail</h2>
 </div>
     @if(session('info'))
     <br>

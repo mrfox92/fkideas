@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\User;
+use Caffeinated\Shinobi\Models\Role;
+
 class UserController extends Controller
 {
     /**
@@ -14,28 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        $users = User::orderBy('id', 'DESC')->paginate(10);
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -44,9 +27,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.users.show', compact('user'));
     }
 
     /**
@@ -55,9 +38,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        $roles = Role::get();
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -67,9 +51,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        /* 1 actualizar el usuario */
+        $user->update($request->all());
+        /* 2 actualizar los roles */
+        $user->roles()->sync($request->get('roles'));
+
+        return redirect()->route('users.edit', $user->id)
+            ->with('info', 'información usuario actualizada con éxito');
     }
 
     /**
@@ -78,8 +68,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return back()->with('info', 'usuario eliminado exitosamente');
     }
 }

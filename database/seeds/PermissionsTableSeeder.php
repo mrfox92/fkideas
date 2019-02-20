@@ -81,16 +81,6 @@ class PermissionsTableSeeder extends Seeder
             'slug'          =>   'info.edit',
             'description'   =>   'Editar la información de contacto de la empresa'
         ]);
-        Permission::create([
-            'name'          =>   'Crear info',
-            'slug'          =>   'info.create',
-            'description'   =>   'Crear la información de contacto de la empresa'
-        ]);
-        Permission::create([
-            'name'          =>   'Eliminar info',
-            'slug'          =>   'info.destroy',
-            'description'   =>   'Eliminar la información de contacto de la empresa'
-        ]);
 
         //Mueblería retail
 

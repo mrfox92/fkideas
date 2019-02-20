@@ -39,7 +39,9 @@
         <div class="col-md-10">
             <div class="card mt-4 mb-5">
                 <div class="card-header">
+                    @can('aseo_industrial.create')
                     <a class="btn btn-primary float-right" href="{{ route('aseo_industrial.create') }}">Crear nuevo</a>
+                    @endcan
                 </div>
                 <div class="card-body">
                     <table class="table table-stripped table-hover table-responsive-sm">
@@ -59,11 +61,17 @@
                                 <td class="d-none d-lg-table-cell">{{ $aseo_industrial->location }}</td>
                                 <td class="text-lowercase">{{ $aseo_industrial->status }}</td>
                                 <td>
+                                    @can('aseo_industrial.show')
                                     <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('aseo_industrial.show', $aseo_industrial->id) }}" title="Ver detalle">Ver</a>
+                                    @endcan
+                                    @can('aseo_industrial.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('aseo_industrial.edit', $aseo_industrial->id) }}" title="Editar información">Editar</a>
+                                    @endcan
+                                    @can('aseo_industrial.destroy')
                                     {!! Form::open(['route' => ['aseo_industrial.destroy', $aseo_industrial->id], 'method' => 'DELETE']) !!}
                                         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}
                                     {!! Form::close() !!}
+                                    @endcan
                                 </td>
                             </tr>
                             @endforeach    

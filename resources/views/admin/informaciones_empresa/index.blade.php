@@ -58,8 +58,12 @@
                                 <td class="d-none d-lg-table-cell">{{ $info->contact_number }}</td>
                                 <td >{{ $info->location }}</td>
                                 <td>
+                                    @can('info.show')
                                     <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('info.show', $info->id) }}" title="Ver detalle">Ver</a>
+                                    @endcan
+                                    @can('info.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('info.edit', $info->id) }}" title="Editar información">Editar</a>
+                                    @endcan
                                 </td>
                             </tr>
                             @endforeach    

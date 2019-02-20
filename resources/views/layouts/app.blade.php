@@ -83,18 +83,37 @@
                             @endif
 
                         @else
+
+                            @can('users.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
+                            </li>
+                            @endcan
+                            @can('roles.index')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
+                            </li>
+                            @endcan
+                            @can('retail.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('retail.index') }}">Muebleria retail</a>
                             </li>
+                            @endcan
+                            @can('aseo_industrial.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('aseo_industrial.index') }}">Aseo Industrial</a>
                             </li>
+                            @endcan
+                            @can('remodelacion_construccion.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('remodelacion_construccion.index') }}">Remodelación y Construcción</a>
                             </li>
+                            @endcan
+                            @can('info.index')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('info.index') }}">Información Empresa</a>
                             </li>
+                            @endcan
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

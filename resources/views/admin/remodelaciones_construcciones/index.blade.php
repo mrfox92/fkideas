@@ -39,7 +39,9 @@
         <div class="col-md-10">
             <div class="card mt-4 mb-5">
                 <div class="card-header">
+                    @can('remodelacion_construccion.create')
                     <a class="btn btn-primary float-right" href="{{ route('remodelacion_construccion.create') }}">Crear nuevo</a>
+                    @endcan
                 </div>
                 <div class="card-body">
                     <table class="table table-stripped table-hover table-responsive-sm">
@@ -59,11 +61,17 @@
                                 <td class="d-none d-lg-table-cell">{{ $remodelacion_construccion->location }}</td>
                                 <td class="text-lowercase">{{ $remodelacion_construccion->status }}</td>
                                 <td>
+                                    @can('remodelacion_construccion.show')
                                     <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.show', $remodelacion_construccion->id) }}" title="Ver detalle">Ver</a>
+                                    @endcan
+                                    @can('remodelacion_construccion.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.edit', $remodelacion_construccion->id) }}" title="Editar información">Editar</a>
+                                    @endcan
+                                    @can('remodelacion_construccion.destroy')
                                     {!! Form::open(['route' => ['remodelacion_construccion.destroy', $remodelacion_construccion->id], 'method' => 'DELETE']) !!}
                                         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}
                                     {!! Form::close() !!}
+                                    @endcan
                                 </td>
                             </tr>
                             @endforeach    

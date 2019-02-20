@@ -1,9 +1,13 @@
 /* estilos contenido*/
 
+@charset "UTF-8";
 .content-retail,
 .content-aseo-industrial,
 .content-remodelacion-construccion,
-.content-info {
+.content-info,
+.content-users,
+.content-roles,
+.content-registro {
     margin-top: 6em;
     margin-bottom: 3em;
 }
