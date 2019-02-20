@@ -149,8 +149,8 @@
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
                     <h3 class="h3-responsive card-title pt-2"><strong>{{ $aseo_industrial->title }}</strong></h3>
-                    <p>{{ $aseo_industrial->excerpt }}</p>
-                    <a data-fancybox="gallery" data-caption="{{ $aseo_industrial->description }}" class="btn btn-pink" href="{{ asset( $aseo_industrial->file ) }}"><i class="fas fa-clone left"></i> Ver más
+                    <a data-fancybox="gallery" data-caption="{{ $aseo_industrial->description }}" class="btn btn-pink" href="{{ asset( $aseo_industrial->file ) }}"><i class="fas fa-clone left"></i> 
+                        Ver más
                     </a>
                 </div>
             </div>
@@ -169,10 +169,5 @@
 <!-- clients -->
 
 <!-- clients -->
-</section>
-<!-- sección parallax final pagina -->
-<section class="view parallax-contacto-bg" style="background-image: url({{ asset('storage/images/aseo-industrial.jpg')}});">
-    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-    </div>
 </section>
 @endsection

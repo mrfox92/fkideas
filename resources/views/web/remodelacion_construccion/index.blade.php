@@ -148,7 +148,6 @@
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
                     <h3 class="h3-responsive card-title pt-2"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
-                    <p>{{ $remodelacion_construccion->excerpt }}</p>
                     <a data-fancybox="gallery" data-caption="{{ $remodelacion_construccion->description }}" class="btn btn-pink" href="{{ asset( $remodelacion_construccion->file ) }}"><i class="fas fa-clone left"></i> Ver más
                     </a>
                 </div>
@@ -168,10 +167,5 @@
 <!-- clients -->
 
 <!-- clients -->
-</section>
-<!-- sección parallax final página -->
-<section class="view parallax-contacto-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
-    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-    </div>
 </section>
 @endsection

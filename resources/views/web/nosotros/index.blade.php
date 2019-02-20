@@ -131,9 +131,4 @@
     </article>
     <!-- fin clientes marcas asociadas -->
 </section>
-<!-- sección parallax final página -->
-<section class="view parallax-contact-bg" style="background-image: url({{ asset('storage/images/nosotros.png')}});">
-    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-    </div>
-</section>
 @endsection

@@ -187,9 +187,4 @@
 
 <!-- clients -->
 </section>
-<!-- sección parallax final página -->
-<section class="view parallax-contacto-bg" style="background-image: url({{ asset('storage/images/mueblería.jpg')}});">
-    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-    </div>
-</section>
 @endsection
