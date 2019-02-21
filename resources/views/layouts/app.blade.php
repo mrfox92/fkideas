@@ -154,11 +154,11 @@
                 </div>
             </div>
         </nav>
-        @if(session('info'))
+        @if(session('flash_message'))
         <div class="row d-flex justify-content-center align-item-center success-info">
             <div class="col-md-10">
                 <div class="alert alert-success text-center">
-                    {{ session('info') }}
+                    {{ session('flash_message') }}
                 </div>
             </div>
         </div>

@@ -55,7 +55,7 @@ class ContactoController extends Controller
             $mail->to('fkideas123@gmail.com')->subject($request->subject);
         });
 
-        return redirect()->back()->with('info', 'Su correo ha sido enviado con éxito');
+        return redirect()->back()->with('flash_message', 'Su correo ha sido enviado con éxito');
     }
 
     /**
