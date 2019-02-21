@@ -38,21 +38,21 @@
         <!-- info mueblería retail -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-muebleria texto-muebleria">
-                <i class="h1-responsive fas fa-tools mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/muebleria-retail.png') }}" alt="icono mueblería retail">
             </a>
         </div>
         <!-- info mueblería retail -->
         <!-- info logo vollumétrico -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-logo-volumetrico texto-logo-volumetrico">
-                <i class="h1-responsive fas fa-cube mt-5 mb-5"></i>
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-oficina-linea-plana texto-oficina-linea-plana">
+                <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/muebles-de-oficina-y-linea-plana.png') }}" alt="icono muebles de oficina y linea plana">
             </a>
         </div>
         <!-- info logo vollumétrico -->
         <!-- info Acrílico y vidrio -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-acrilico-vidrio texto-acrilico-vidrio">
-                <i class="h1-responsive fas fa-table mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/acrilico-y-vidrio.png') }}" alt="icono acrílico y vidrio">
             </a>
         </div>
         
@@ -60,14 +60,21 @@
         <!-- info Acero inoxidable -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-acero texto-acero">
-                <i class="h1-responsive fas fa-shield-alt mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/muebles-metalicos.png') }}" alt="icono muebles metálicos">
             </a>
         </div>
         <!-- info Acero inoxidable -->
         <!-- info Remodelación de locales -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-4" aria-expanded="false" aria-controls="titulo-store texto-store">
-                <i class="h1-responsive fas fa-store-alt mt-5 mb-5"></i>
+            <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/remodelacion-de-locales.png') }}" alt="icono remodelación de locales">
+            </a>
+        </div>
+        <!-- info Remodelación de locales -->
+        <!-- info Remodelación de locales -->
+        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
+            <a role="button" data-toggle="collapse" data-target=".multi-collapse-5" aria-expanded="false" aria-controls="titulo-stand texto-stand">
+            <img class="iconos" src="{{ asset('storage/icons/muebleria-retail/stand.png') }}" alt="icono stands">
             </a>
         </div>
         <!-- info Remodelación de locales -->
@@ -91,14 +98,14 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse" id="titulo-logo-volumetrico">
+                <div class="collapse multi-collapse" id="titulo-oficina-linea-plana">
                     <div class="card-body">
-                        <h2 class="h2-responsive text-center">Logo Volumétrico</h2>
+                        <h2 class="h2-responsive text-center">Muebles de oficina y linea plana</h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse" id="texto-logo-volumetrico">
+                <div class="collapse multi-collapse" id="texto-oficina-linea-plana">
                     <div class="card-body text-justify">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
                     </div>
@@ -125,7 +132,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="titulo-acero">
                     <div class="card-body">
-                        <h2 class="h2-responsive text-center">Acero Inoxidable</h2>
+                        <h2 class="h2-responsive text-center">Muebles Metálicos</h2>
                     </div>
                 </div>
             </div>
@@ -147,6 +154,22 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-4" id="texto-store">
+                    <div class="card-body text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-5" id="titulo-stand">
+                    <div class="card-body">
+                        <h2 class="h2-responsive text-center">Stands</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="collapse multi-collapse-5" id="texto-stand">
                     <div class="card-body text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
                     </div>

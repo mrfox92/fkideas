@@ -39,21 +39,21 @@
         <!-- info aseo industrial-->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-1 texto-1">
-                <i class="h1-responsive far fa-check-circle mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/entrega-final-obras.png') }}" alt="icono entrega final de obras">
             </a>
         </div>
         <!-- info aseo industrial-->
         <!-- info lavado de pisos -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-2 texto-2">
-                <i class="h1-responsive fas fa-broom mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/lavado-pisos.png') }}" alt="icono lavado de pisos">
             </a>
         </div>
         <!-- info lavado de pisos -->
         <!-- info Lavado de alfombras -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-3 texto-3">
-                <i class="h1-responsive fas fa-square-full mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/lavado-alfombras.png') }}" alt="icono lavado de alfombras">
             </a>
         </div>
         
@@ -61,7 +61,7 @@
         <!-- info Tratamiento Especial de Pisos -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-4 texto-4">
-                <i class="h1-responsive far fa-square mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/tratamiento-especial-pisos.png') }}" alt="icono tratamiento especial de pisos">
             </a>
         </div>
         <!-- info Tratamiento Especial de Pisos -->

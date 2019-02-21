@@ -39,32 +39,24 @@
         <!-- info marca -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-1 texto-1">
-                <i class="h1-responsive fas fa-rocket mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/remodelaciones/activacion-de-marca.png') }}" alt="icono activación de marca">
             </a>
         </div>
         <!-- info marca -->
         <!-- info marketing digital -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="titulo-2 texto-2">
-                <i class="h1-responsive fas fa-rss mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/remodelaciones/marketing-digital.png') }}" alt="icono marketing digital">
             </a>
         </div>
         <!-- info marketing digital -->
-        <!-- info eventos -->
-        <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
-            <a role="button" data-toggle="collapse" data-target=".multi-collapse-1" aria-expanded="false" aria-controls="titulo-3 texto-3">
-                <i class="h1-responsive fas fa-star-half-alt mt-5 mb-5"></i>
-            </a>
-        </div>
-        
-        <!-- info eventos -->
-        <!-- info diseño grafico y web -->
+        <!-- info diseño grafico -->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-2" aria-expanded="false" aria-controls="titulo-4 texto-4">
-                <i class="h1-responsive fas fa-laptop-code mt-5 mb-5"></i>
+                <img class="iconos" src="{{ asset('storage/icons/remodelaciones/diseno-grafico.png') }}" alt="icono diseño gráfico">
             </a>
         </div>
-        <!-- info diseño grafico y web -->
+        <!-- info diseño grafico -->
     </div> 
         <!-- sección info desplegable íconos -->
         <div class="row">
@@ -101,25 +93,9 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-1" id="titulo-3">
-                    <div class="card-body">
-                        <h2 class="h2-responsive text-center">Producción de Eventos</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-1" id="texto-3">
-                    <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="titulo-4">
                     <div class="card-body">
-                        <h2 class="h2-responsive text-center">Diseño Gráfico y Web</h2>
+                        <h2 class="h2-responsive text-center">Diseño Gráfico</h2>
                     </div>
                 </div>
             </div>

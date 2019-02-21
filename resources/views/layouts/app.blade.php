@@ -18,6 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
+    <link rel="shortcut icon" href="{{ asset('storage/images/icon.png') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -31,8 +32,8 @@
     <div id="app">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-item" href="{{ url('/') }}">
+                    <img class="nav-link logo" src="{{ asset('storage/images/logo-1.png') }}" alt="logo fkideas">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -153,7 +154,15 @@
                 </div>
             </div>
         </nav>
-
+        @if(session('info'))
+        <div class="row d-flex justify-content-center align-item-center success-info">
+            <div class="col-md-10">
+                <div class="alert alert-success text-center">
+                    {{ session('info') }}
+                </div>
+            </div>
+        </div>
+        @endif
         <main class="py-0">
             @yield('content')
         </main>
@@ -169,39 +178,35 @@
                     </button>
                 </div>
                 <div class="modal-body mx-3">
-                    <div class="md-form mb-5">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input type="text" id="name" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="name">Nombre</label>
-                    </div>
-                    
-                    <div class="md-form mb-5">
-                    <i class="fas fa-mobile-alt prefix grey-text"></i>
-                    <input type="number" id="contact_number" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="contact_number">N° contacto (opcional)</label>
-                    </div>
-                    
-                    <div class="md-form mb-5">
-                    <i class="fas fa-envelope prefix grey-text"></i>
-                    <input type="email" id="email" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="email">Email</label>
-                    </div>
-
-                    <div class="md-form mb-5">
-                    <i class="fas fa-tag prefix grey-text"></i>
-                    <input type="text" id="subject" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="subject">Motivo</label>
-                    </div>
-
+                {!! Form::open(['route' => 'contact.store']) !!}
                     <div class="md-form">
-                    <i class="fas fa-pencil prefix grey-text"></i>
-                    <textarea type="text" id="message" class="md-textarea form-control" rows="4"></textarea>
-                    <label data-error="wrong" data-success="right" for="message">Ingresa tu mensaje</label>
+                        <i class="fas fa-user prefix grey-text"></i>
+                        {{ Form::label('name', 'Nombre') }}
+                        {{ Form::text('name', null, ['class' => 'md-form mb-5', 'id' => 'name']) }}
+                    </div>    
+                    <div class="md-form">
+                        <i class="fas fa-mobile-alt prefix grey-text"></i>
+                        {{ Form::label('contact_number', 'N° contacto (opcional)') }}
+                        {{ Form::number('contact_number', null, ['class' => 'md-form mb-5', 'id' => 'contact_number']) }}
                     </div>
-
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-blue">Enviar <i class="fas fa-paper-plane-o ml-1"></i></button>
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        {{ Form::label('email', 'Email') }}
+                        {{ Form::text('email', null, ['class' => 'md-form mb-5', 'id' => 'email']) }}
+                    </div>
+                    <div class="md-form">
+                        <i class="fas fa-tag prefix grey-text"></i>
+                        {{ Form::label('subject', 'Motivo') }}
+                        {{ Form::text('subject', null, ['class' => 'md-form mb-5', 'id' => 'subject']) }}
+                    </div>
+                    <div class="md-form">
+                        {{ Form::label('message', 'Ingrese su mensaje') }}
+                        {{ Form::textarea('message', null, ['class' => 'md-textarea form-control', 'id' => 'message', 'rows' => 4]) }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form::submit('Enviar', ['class' => 'btn btn-primary']) }}
+                    </div>
+                {!! Form::close() !!}
                 </div>
                 </div>
             </div>

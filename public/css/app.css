@@ -4,6 +4,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.success-info {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 8em;
+}
+
 
 /* background menu principal */
 
@@ -57,17 +66,10 @@ footer {
     cursor: pointer;
 }
 
-.servicios-aseo-industrial i {
-    font-size: 10vw;
-    padding: 1.5vw;
-    border: 1px solid rgba(56, 56, 56, 0.2);
-    box-shadow: 2px 3px 2px rgb(22.2%, 22.2%, 22.2%);
-    border-radius: 5%;
-    cursor: pointer;
-}
-
-.servicios-remodelacion-construccion i {
-    font-size: 10vw;
+.article-services-muebleria .iconos,
+.servicios-aseo-industrial .iconos,
+.servicios-remodelacion-construccion .iconos {
+    width: 10vw;
     padding: 1.5vw;
     border: 1px solid rgba(56, 56, 56, 0.2);
     box-shadow: 2px 3px 2px rgb(22.2%, 22.2%, 22.2%);
