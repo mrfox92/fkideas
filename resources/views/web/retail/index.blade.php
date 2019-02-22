@@ -14,16 +14,16 @@
 <!-- sección mueblería retail -->
 <section class="view parallax-muebleria-bg" style="background-image: url({{ asset('storage/images/Madera3.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
-                <div class="col-md-12">
-                    <h2 class="h1-responsive font-weight-bold text-center text-white mb-5">Mueblería retail</h2>
+        <div class="rgba-white-strong wow fadeIn py-4">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h1 class="h1-responsive font-weight-bold text-center text-dark">Mueblería retail</h1>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-md-12">
-                    <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        La mejor opción en fabricación de muebles publicitarios, de oficina y línea plana.
+            <div class="row d-flex justify-content-center align-items-center mt-2">
+                <div class="col-md-8">
+                    <p class="h4-responsive text-center text-dark">
+                    La mejor opción en fabricación de muebles publicitarios, de oficina y línea plana.
                     </p>
                 </div>
             </div>
@@ -32,7 +32,7 @@
 </section>
 <section class="container-fluid pt-4 pb-4 rgba-dark-light">
 <article class="container-fluid article-services-muebleria">
-    <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
+    <h2 class="h-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
     <BR>
     <div class="row d-flex justify-content-center align-items-center">
         <!-- info mueblería retail -->

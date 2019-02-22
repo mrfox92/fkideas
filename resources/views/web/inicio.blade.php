@@ -56,16 +56,16 @@
 <!-- sección mueblería retail -->
 <section class="view parallax-muebleria-bg" style="background-image: url({{ asset('storage/images/parallax-img-muebleria.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
-                <div class="col-md-12">
-                    <h2 class="h1-responsive font-weight-bold text-center text-white mb-5">Mueblería retail</h2>
+        <div class="rgba-white-strong wow fadeInUp py-4">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h2 class="h1-responsive font-weight-bold text-center text-dark">Mueblería retail</h2>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-md-12">
-                    <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        La mejor opción en fabricación de muebles publicitarios, de oficina y línea plana.
+            <div class="row d-flex justify-content-center align-items-center mt-2">
+                <div class="col-md-8">
+                    <p class="h4-responsive text-center text-dark">
+                    La mejor opción en fabricación de muebles publicitarios, de oficina y línea plana.
                     </p>
                 </div>
             </div>
@@ -92,16 +92,16 @@
 <!-- sección aseo industrial -->
 <section class="view parallax-aseo-industrial-bg" style="background-image: url({{ asset('storage/images/aseo-industrial.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
-                <div class="col-md-12">
-                    <h2 class="h1-responsive font-weight-bold text-center text-white mb-5">Aseo Industrial</h2>
+        <div class="rgba-white-strong wow fadeInUp py-4">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h2 class="h1-responsive font-weight-bold text-center text-dark">Aseo Industrial</h2>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-md-12">
-                    <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure fugiat explicabo commodi.
+            <div class="row d-flex justify-content-center align-items-center mt-2">
+                <div class="col-md-8">
+                    <p class="h4-responsive text-center text-dark">
+                        Equipo capacitado en limpieza industrial hacemos entregas de obra de alta calidad.
                     </p>
                 </div>
             </div>
@@ -128,16 +128,16 @@
 <!-- sección remodelacion y construccion -->
 <section class="view parallax-remodelacion-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
-                <div class="col-md-12">
-                    <h2 class="h1-responsive font-weight-bold text-center text-white mb-5">Remodelación y Construcción</h2>
+    <div class="rgba-white-strong wow fadeInUp py-4">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h2 class="h1-responsive font-weight-bold text-center text-dark">Remodelación y Construcciones menores</h2>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-md-12">
-                    <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        Ofrecemos herramientas creativas para impulsar tu marca
+            <div class="row d-flex justify-content-center align-items-center mt-2">
+                <div class="col-md-8">
+                    <p class="h4-responsive text-center text-dark">
+                        Ofrecemos las herramientas creativas que necesitas para impulsar tu marca.
                     </p>
                 </div>
             </div>

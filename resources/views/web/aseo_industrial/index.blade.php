@@ -14,18 +14,17 @@
 <!-- sección mueblería retail -->
 <section class="view parallax-aseo-industrial-bg" style="background-image: url({{ asset('storage/images/aseo-industrial.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-4 mb-4">
-                <div class="col-md-12">
-                    <h2 class="h1-responsive font-weight-bold text-center text-white mb-5">Aseo Industrial</h2>
-                </div>
+    <div class="rgba-white-strong wow fadeIn py-4">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+                <h1 class="h1-responsive font-weight-bold text-center text-dark">Aseo Industrial</h1>
             </div>
-            <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-md-12">
-                    <p class="h3-responsive text-justify text-white wow fadeInUp">
-                        Equipo capacitado en limpieza industrial hacemos entregas de obra de alta calidad.
-                    </p>
-                </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center mt-2">
+            <div class="col-md-8">
+                <p class="h4-responsive text-center text-dark">
+                    Equipo capacitado en limpieza industrial hacemos entregas de obra de alta calidad.
+                </p>
             </div>
         </div>
     </div>
