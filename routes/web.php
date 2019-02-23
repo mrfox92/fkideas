@@ -14,9 +14,12 @@
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/', 'Web\HomeController@index')->name('inicio');
+Route::get('profile', function(){
+    return view('admin.home');
+})->middleware('verified');
 
 //Web public routes
 Route::get('servicio-muebleria-retail', 'Web\MuebleriaRetailController@index')->name('muebleria_retail');
