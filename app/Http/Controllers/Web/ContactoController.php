@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use Mail;
+use App\Mail\Contacto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -38,23 +39,23 @@ class ContactoController extends Controller
     {
         $this->validate($request, [
             'name'  => 'required',
-            'contact_number'    => 'required',
             'email' => 'required|email',
             'subject'   => 'required',
             'message'   => 'required'
         ]);
 
-        Mail::send('emails.contact-message', [
-            'nombre' => $request->name,
-            'contacto' => $request->contact_number,
-            'direccion_correo' => $request->email,
-            'motivo' => $request->subject,
-            'mensaje' => $request->message,
-        ], function($mail) use($request){
-            $mail->from($request->email, $request->name);
-            $mail->to('fkideas123@gmail.com')->subject($request->subject);
-        });
+        $formInput = [
+            'nombre' => $request->input('name'),
+            'email' => $request->input('email'),
+            'asunto' => $request->input('subject'),
+            'mensaje' => $request->input('message')
+        ];
 
+        if($request->contact_number){
+            $formInput['contacto'] = $request->input('contact_number');
+        }
+
+        Mail::send(new Contacto($formInput));
         return redirect()->back()->with('flash_message', 'Su correo ha sido enviado con éxito');
     }
 
