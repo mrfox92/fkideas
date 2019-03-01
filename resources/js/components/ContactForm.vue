@@ -36,7 +36,7 @@
 <script>
 export default {
     mounted() {
-        console.log('Componente montado!');
+        console.log('Contact us');
     },
     data(){
         return{

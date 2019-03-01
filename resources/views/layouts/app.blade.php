@@ -9,15 +9,11 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}"> -->
     @yield('styles')
     <link rel="shortcut icon" href="{{ asset('storage/images/icon.png') }}">
     <!-- Font Awesome -->
@@ -74,9 +70,6 @@
                                 <a class="nav-link" data-toggle="modal" data-target="#modalContactForm">
                                     Contacto
                                 </a>
-                                <!-- <a class="nav-link" href="{{ route('contactus') }}">
-                                    Contacto
-                                </a> -->
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-user-circle"></i></a>
@@ -158,15 +151,6 @@
                 </div>
             </div>
         </nav>
-        @if(session('flash_message'))
-        <div class="row d-flex justify-content-center align-item-center success-info">
-            <div class="col-md-10">
-                <div class="alert alert-success text-center">
-                    {{ session('flash_message') }}
-                </div>
-            </div>
-        </div>
-        @endif
         <!-- modal contacto -->
         <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
@@ -305,13 +289,7 @@
 </footer>
 <!-- Footer -->
     </div>
-    <!-- JQuery -->
-    <!-- <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script> -->
-    <!-- Bootstrap tooltips -->
-    <!-- <script src="{{ asset('js/popper.min.js') }}"></script> -->
-    <!-- Bootstrap core JavaScript -->
-    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
-    <!-- MDB core JavaScript -->
+    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script src="{{ asset('js/mdb.min.js') }}"></script>
