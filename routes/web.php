@@ -28,6 +28,8 @@ Route::get('servicio-remodelacion-y-construccion', 'Web\RemodelacionConstruccion
     ->name('remodelacion_construccion');
 Route::get('nosotros', 'Web\NosotrosController@index')->name('nosotros');
 Route::post('contacto', 'Web\ContactoController@store')->name('contact.store');
+Route::get('contactanos', 'Web\ContactoController@index')->name('contactus');
+Route::post('formSubmit', 'Web\ContactoController@formSubmit');
 
 /* routes resources, middleware auth group and permissions*/
 

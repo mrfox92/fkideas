@@ -1,16 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<style>
-.parallax-aseo-industrial-bg,
-.parallax-contacto-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-</style>
 <!-- sección mueblería retail -->
 <section class="view parallax-aseo-industrial-bg" style="background-image: url({{ asset('storage/images/aseo-industrial.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">

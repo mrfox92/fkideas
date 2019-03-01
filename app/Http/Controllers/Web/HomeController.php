@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $info = Info::orderBy('id', 'ASC')->first();
-        return view('web.inicio', compact('info'));
+        return view('web.home.index', compact('info'));
     }
 
     /**

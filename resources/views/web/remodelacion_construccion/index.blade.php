@@ -1,16 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<style>
-.parallax-remodelacion-bg,
-.parallax-contacto-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-</style>
 <!-- sección remodelación y construcción -->
 <section class="view parallax-remodelacion-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">

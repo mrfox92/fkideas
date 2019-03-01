@@ -17,6 +17,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}"> -->
     @yield('styles')
     <link rel="shortcut icon" href="{{ asset('storage/images/icon.png') }}">
     <!-- Font Awesome -->
@@ -70,9 +71,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link" data-toggle="modal" data-target="#modalContactForm">
+                                <a class="nav-link" data-toggle="modal" data-target="#modalContactForm">
                                     Contacto
                                 </a>
+                                <!-- <a class="nav-link" href="{{ route('contactus') }}">
+                                    Contacto
+                                </a> -->
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-user-circle"></i></a>
@@ -163,9 +167,6 @@
             </div>
         </div>
         @endif
-        <main class="py-0">
-            @yield('content')
-        </main>
         <!-- modal contacto -->
         <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
@@ -177,41 +178,14 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body mx-3">
-                {!! Form::open(['route' => 'contact.store']) !!}
-                    <div class="md-form">
-                        <i class="fas fa-user prefix grey-text"></i>
-                        {{ Form::label('name', 'Nombre') }}
-                        {{ Form::text('name', null, ['class' => 'md-form mb-5', 'id' => 'name']) }}
-                    </div>    
-                    <div class="md-form">
-                        <i class="fas fa-mobile-alt prefix grey-text"></i>
-                        {{ Form::label('contact_number', 'N° contacto (opcional)') }}
-                        {{ Form::number('contact_number', null, ['class' => 'md-form mb-5', 'id' => 'contact_number']) }}
-                    </div>
-                    <div class="md-form">
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        {{ Form::label('email', 'Email') }}
-                        {{ Form::text('email', null, ['class' => 'md-form mb-5', 'id' => 'email']) }}
-                    </div>
-                    <div class="md-form">
-                        <i class="fas fa-tag prefix grey-text"></i>
-                        {{ Form::label('subject', 'Motivo') }}
-                        {{ Form::text('subject', null, ['class' => 'md-form mb-5', 'id' => 'subject']) }}
-                    </div>
-                    <div class="md-form">
-                        {{ Form::label('message', 'Ingrese su mensaje') }}
-                        {{ Form::textarea('message', null, ['class' => 'md-textarea form-control', 'id' => 'message', 'rows' => 4]) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::submit('Enviar', ['class' => 'btn btn-primary']) }}
-                    </div>
-                {!! Form::close() !!}
-                </div>
+                <contact-form></contact-form>
                 </div>
             </div>
             </div>
         <!-- fin modal contacto -->
+        <main class="py-0">
+            @yield('content')
+        </main>
 <!-- Footer -->
 <footer class="page-footer font-small bg-footer pt-4">
 
@@ -332,12 +306,14 @@
 <!-- Footer -->
     </div>
     <!-- JQuery -->
-    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script> -->
     <!-- Bootstrap tooltips -->
-    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/popper.min.js') }}"></script> -->
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
     <!-- MDB core JavaScript -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script src="{{ asset('js/mdb.min.js') }}"></script>
     <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
     <script>

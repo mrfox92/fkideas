@@ -1,26 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<style>
-.cabecera {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-.parallax-muebleria-bg, 
-.parallax-aseo-industrial-bg, 
-.parallax-remodelacion-bg,
-.parallax-contact-bg{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-</style>
 <div class="view cabecera" style="background-image: url({{ asset('storage/images/fondo.jpg')}});">
             <div class="full-bg-img">
                 <div class="mask rgba-black-light flex-center d-flex justify-content-center align-items-center">

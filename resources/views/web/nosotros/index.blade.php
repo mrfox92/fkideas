@@ -1,24 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<style>
-.parallax-nosotros-header,
-.parallax-contact-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-.parallax-servicios-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 60vh;
-    margin-top: 0px !important;
-}
-</style>
 <div class="view parallax-nosotros-header" style="background-image: url({{ asset('storage/images/nosotros.png')}});">
     <div class="full-bg-img">
         

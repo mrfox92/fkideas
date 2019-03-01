@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use Mail;
 use App\Mail\Contacto;
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactUsRequest;
 use App\Http\Controllers\Controller;
 
 class ContactoController extends Controller
@@ -16,7 +17,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        
+        return view('web.contacto.index');
     }
 
     /**
@@ -70,6 +71,11 @@ class ContactoController extends Controller
         //
     }
 
+    public function formSubmit(ContactUsRequest $request){
+        
+        /* return response()->json([$request->all()]); */
+        return response()->json(null, 200);
+    }
     /**
      * Show the form for editing the specified resource.
      *
