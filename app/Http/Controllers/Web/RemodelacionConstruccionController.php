@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\RemodelacionConstruccion;
+use App\RemodelacionConstruccionImages;
 class RemodelacionConstruccionController extends Controller
 {
     /**
@@ -18,28 +19,10 @@ class RemodelacionConstruccionController extends Controller
         $remodelaciones_construcciones = RemodelacionConstruccion::orderBy('id', 'DESC')
             ->where('status', 'PUBLICADO')
             ->paginate(6);
+        foreach($remodelaciones_construcciones as $remodelacion_construccion){
+            $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->pluck('path')->first();
+        }        
         return view('web.remodelacion_construccion.index', compact('remodelaciones_construcciones'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -48,42 +31,14 @@ class RemodelacionConstruccionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $remodelacion_construccion = RemodelacionConstruccion::where('slug', $slug)->first();
+        if($remodelacion_construccion){
+            $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->get();
+            return view('web.remodelacion_construccion.show', compact('remodelacion_construccion'));
+        }else{
+            return view('errors.404');
+        }
     }
 }

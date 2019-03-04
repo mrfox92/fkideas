@@ -12,8 +12,8 @@
     {{ Form::textarea('description', null, ['class' => 'form-control', 'id' => 'description', 'rows' => 4]) }}
 </div>
 <div class="form-group">
-    {{ Form::label('file', 'Seleccione una imagen') }}
-    {{ Form::file('file', ['class' => 'form-control', 'id' => 'file']) }}
+    {{ Form::label('file', 'Seleccione imagenes a subir') }}
+    {{ Form::file('file[]', ['multiple' => 'true', 'class' => 'form-control', 'id' => 'file']) }}
 </div>
 <div class="form-group">
     {{ Form::label('status', 'Estado de la publicación') }}
@@ -26,5 +26,5 @@
     </label>
 </div>
 <div class="form-group">
-    {{ Form::submit('Crear', ['class' => 'btn btn-primary']) }}
+    {{ Form::submit('Guardar', ['class' => 'btn btn-primary']) }}
 </div>

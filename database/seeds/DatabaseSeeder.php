@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AseosIndustrialesTableSeeder::class);
         $this->call(RemodelacionesConstruccionesTableSeeder::class);
         $this->call(InfosTableSeeder::class);
+        $this->call(RetailImagesTableSeeder::class);
+        $this->call(RemodelacionConstruccionTableSeeder::class);
     }
 }

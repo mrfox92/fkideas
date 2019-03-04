@@ -21,7 +21,7 @@
 <section class="container-fluid">
 <!-- servicios aseo industrial -->
 <article class="container-fluid servicios-aseo-industrial">
-    <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Aseo Industrial</h2>
+    <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Aseo Industrial</h2>
     <BR>
     <div class="row d-flex justify-content-center align-items-center">
         <!-- info aseo industrial-->
@@ -127,7 +127,7 @@
 <!-- cards contenido aseo industrial -->
 <div class="row mt-5 mb-5">
     <div class="col-md-12">
-        <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
+        <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
 <div class="row">

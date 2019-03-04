@@ -27,7 +27,8 @@ class RetailStoreRequest extends FormRequest
             'title' => 'required|max:128',
             'location' => 'required|max:128',
             'description' => 'required',
-            'file' => 'required|max:1024|mimes:jpeg,jpg,png',
+            'file' => 'required',
+            'file.*' => 'max:1024|mimes:jpeg,jpg,png',
             'status' => 'required',
         ];
     }
@@ -39,9 +40,10 @@ class RetailStoreRequest extends FormRequest
             'location.required' => 'Por favor debe especificar un lugar ó empresa',
             'location.max' => 'La especificación del lugar ó empresa no debe exceder los 128 caracteres, reintente',
             'description.required' => 'Debe ingresar una descripción',
-            'file.required' => 'Debe subir una imagen',
+            'file.required' => 'Debe subir a lo menos una imagen',
             'file.uploaded' => 'Error al subir imagen. La imagen debe pesar como máximo 1MB',
             'file.mimes' => 'El formato de la imagen no es válido (intente con jpeg, jpg ó png)',
+            'file.*.uploaded' => 'Error al subir imagenes. cada imagen debe pesar como máximo 1MB',
             'status.required' => 'Debe seleccionar un estado de publicación',
         ];
     }

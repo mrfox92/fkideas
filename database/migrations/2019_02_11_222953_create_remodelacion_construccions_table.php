@@ -16,10 +16,10 @@ class CreateRemodelacionConstruccionsTable extends Migration
         Schema::create('remodelacion_construccions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 128);
+            $table->string('slug', 128)->unique();
             $table->text('description');
             $table->string('location', 128);
             $table->enum('status', ['PUBLICADO', 'BORRADOR'])->default('BORRADOR');
-            $table->string('file', 128);
             $table->unsignedInteger('user_id');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')

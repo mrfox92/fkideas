@@ -1,7 +1,3 @@
-@section('styles')
-<!-- content style -->
-<link rel="stylesheet" href="{{ asset('css/content.css') }}">
-@endsection
 @extends('layouts.app')
 @section('content')
 <section class="view parallax-muebleria-bg" style="background-image: url({{ asset( $retail->images->first()->path )}});">
@@ -19,14 +15,14 @@
 <article class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item h6-responsive"><a href="{{ route('retail.index') }}"><i class="fas fa-hand-point-left"></i> Volver a gestion mueblería retail</a></li>
-            <li class="breadcrumb-item h6-responsive active">{{ $retail->title }} <small>(vista demo)</small></li>
+            <li class="breadcrumb-item h6-responsive"><a href="{{ route('muebleria_retail') }}">Mueblería retail</a></li>
+            <li class="breadcrumb-item h6-responsive active" aria-current="page">{{ $retail->title }}</li>
         </ol>
     </nav>
     <div class="row">
         @foreach ( $retail->images as $item)
         <div class="col-md-4 mt-4 mb-5">
-            <div class="card">
+            <div class="card wow fadeInUp">
                 <a data-fancybox="gallery" data-caption="{{ $retail->description }}" href="{{ asset( $item->path ) }}">
                     <img class="img-fluid" src="{{ asset($item->path) }}" alt="{{ $item->name }}">
                 </a>

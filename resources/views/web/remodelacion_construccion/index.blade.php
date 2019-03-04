@@ -109,11 +109,11 @@
 <div class="row">
     @foreach ( $remodelaciones_construcciones as $remodelacion_construccion)
     <div class="col-lg-4 col-md-6 mt-4 mb-5">
-        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset($remodelacion_construccion->file) }});">
+        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset($remodelacion_construccion->images) }});">
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
                     <h3 class="h3-responsive card-title pt-2"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
-                    <a data-fancybox="gallery" data-caption="{{ $remodelacion_construccion->description }}" class="btn btn-pink" href="{{ asset( $remodelacion_construccion->file ) }}"><i class="fas fa-clone left"></i> Ver más
+                        <a class="btn btn-pink" href="{{ route('ver_remodelacion_construccion', $remodelacion_construccion->slug) }}"><i class="fas fa-clone left"></i> Ver más
                     </a>
                 </div>
             </div>

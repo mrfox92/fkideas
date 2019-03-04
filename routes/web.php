@@ -16,10 +16,32 @@
 
 Auth::routes(['verify' => true]);
 
+
 Route::get('/', 'Web\HomeController@index')->name('inicio');
 Route::get('profile', function(){
     return view('admin.home');
 })->middleware('verified');
+
+// Authentication Routes...
+$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+$this->post('login', 'Auth\LoginController@login');
+$this->post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+$this->get('registro', 'Auth\RegisterController@showRegistrationForm')->name('registro');
+$this->post('register', 'Auth\RegisterController@register');
+
+// Password Reset Routes...
+$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+$this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+$this->post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+
+// Email Verification Routes...
+$this->get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+$this->get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
+$this->get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+
 
 //Web public routes
 Route::get('servicio-muebleria-retail', 'Web\MuebleriaRetailController@index')->name('muebleria_retail');
@@ -28,6 +50,10 @@ Route::get('servicio-remodelacion-y-construccion', 'Web\RemodelacionConstruccion
     ->name('remodelacion_construccion');
 Route::get('nosotros', 'Web\NosotrosController@index')->name('nosotros');
 Route::post('formSubmit', 'Web\ContactoController@formSubmit');
+Route::get('servicio-muebleria-retail/{slug}', 'Web\MuebleriaRetailController@show')->name('ver_retail');
+Route::get('servicio-remodelacion-y-construccion/{slug}', 'Web\RemodelacionConstruccionController@show')
+    ->name('ver_remodelacion_construccion');
+
 
 /* routes resources, middleware auth group and permissions*/
 

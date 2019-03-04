@@ -27,7 +27,7 @@ class RemodelacionConstruccionUpdateRequest extends FormRequest
             'title' => 'required|max:128',
             'location' => 'required|max:128',
             'description' => 'required',
-            'file' => 'max:1024|mimes:jpeg,jpg,png',
+            'file.*' => 'max:1024|mimes:jpeg,jpg,png',
             'status' => 'required',
         ];
     }
@@ -41,6 +41,7 @@ class RemodelacionConstruccionUpdateRequest extends FormRequest
             'description.required' => 'Debe ingresar una descripción',
             'file.uploaded' => 'Error al subir imagen. La imagen debe pesar como máximo 1MB',
             'file.mimes' => 'El formato de la imagen no es válido (intente con jpeg, jpg ó png)',
+            'file.*.uploaded' => 'Error al subir imagenes. cada imagen debe pesar como máximo 1MB',
             'status.required' => 'Debe seleccionar un estado de publicación',
         ];
     }

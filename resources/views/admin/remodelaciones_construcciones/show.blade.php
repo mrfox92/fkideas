@@ -4,33 +4,36 @@
 @endsection
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid content-remodelacion-construccion">
-    <div class="jumbotron mt-5 bg-info">
-        <header>
-            <h2 class="h1-responsive text-center">Detalle trabajo remodelación y construcción</h2>
-        </header>
-    </div>
-    <div class="row d-flex justify-content-center align-item-center">
-        <div class="col-md-10">
-            <div class="card mt-4 mb-5">
-                <div class="card-header text-center">
-                    <h6 class="h6-responsive text-center">Título del trabajo u obra</h6>
-                    <h3 class="h3-responsive">{{ $remodelacion->title }}</h3>
-                </div>
-                <div class="card-body">
-                    <h2 class="h2-responsive text-center">Lugar</h2>
-                    <h2 class="h4-responsive text-justify">{{ $remodelacion->location }}</h2>
-                    <h2 class="h2-responsive text-center">Descripción trabajo</h2>
-                    <p class="h6-responsive text-justify">
-                        {{ $remodelacion->description }}
-                    </p>
-                    @if ($remodelacion->file)
-                        <h2 class="h2-responsive text-center">Imagen trabajo terminado</h2>
-                        <img class="img-fluid" src="{{ asset( $remodelacion->file ) }}" alt="{{ $remodelacion->title }}">
-                    @endif
+<section class="view parallax-muebleria-bg" style="background-image: url({{ asset( $remodelacion->images->first()->path )}});">
+    <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
+        <div class="rgba-white-strong wow fadeIn py-4">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h1 class="h1-responsive font-weight-bold text-center text-dark">{{ $remodelacion->title }}</h1>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<section>
+<article class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4">
+            <li class="breadcrumb-item h6-responsive"><a href="{{ route('remodelacion_construccion.index') }}"><i class="fas fa-hand-point-left"></i> Volver a gestión remodelación y construcción</a></li>
+            <li class="breadcrumb-item h6-responsive active" aria-current="page">{{ $remodelacion->title }} <small>(Vista demo)</small></li>
+        </ol>
+    </nav>
+    <div class="row">
+        @foreach ( $remodelacion->images as $item)
+        <div class="col-md-4 mt-4 mb-5">
+            <div class="card">
+                <a data-fancybox="gallery" data-caption="{{ $remodelacion->description }}" href="{{ asset( $item->path ) }}">
+                    <img class="img-fluid" src="{{ asset($item->path) }}" alt="{{ $item->name }}">
+                </a>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</article>
+</section>
 @endsection

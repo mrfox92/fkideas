@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 use App\Retail;
+use App\RetailImages;
 
 class RetailController extends Controller
 {
@@ -24,7 +25,6 @@ class RetailController extends Controller
     public function index()
     {
         $retailers = Retail::orderBy('id', 'DESC')->paginate(10);
-
         return view('admin.retailers.index', compact('retailers'));
     }
 
@@ -46,11 +46,37 @@ class RetailController extends Controller
      */
     public function store(RetailStoreRequest $request)
     {
-        $retail = Retail::create($request->all());
+        $slug = str_slug($request->title, '-');
+        $request->merge(['slug' => $slug]);
+        $retail = Retail::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'description' => $request->description,
+            'location' => $request->location,
+            'status' => $request->status,
+            'user_id' => $request->user_id,
+            'created_at' => $request->created_at,
+            'updated_at' => $request->updated_at    
+        ]);
+
 
         if ($request->file('file')) {
-            $path = Storage::disk('public')->putFile('storage/retailers', $request->file('file'));
-            $retail->fill(['file' => $path])->save();
+            //rescatamos las imagenes
+            $files = $request->file('file');
+            //creamos la ruta de guardado en disco
+            $path_save = 'storage/retailers/'.$retail->id;
+            /* recorremos cada imagen de nuestra coleccion para guardar en disco y los path en
+            la tabla correspondiente */
+            foreach($files as $key => $file){
+                $path_file = Storage::disk('public')->putFile($path_save, $file);
+                $retail_image = RetailImages::create([
+                    'name' => $retail->slug.'-'.($key+1),
+                    'path' => $path_file,
+                    'retail_id' => $retail->id,
+                    'created_at' => $request->created_at,
+                    'updated_at' => $request->updated_at
+                ]);
+            }
         }
 
         return redirect()->route('retail.edit', $retail->id)
@@ -65,7 +91,7 @@ class RetailController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Retail $retail)
-    {
+    {   $retail->images = RetailImages::where('retail_id', $retail->id)->get();
         return view('admin.retailers.show', compact('retail'));
     }
 
@@ -89,15 +115,37 @@ class RetailController extends Controller
      */
     public function update(RetailUpdateRequest $request, Retail $retail)
     {
-        $old_path = $retail->file;
+        $slug = str_slug($request->title, '-');
+        $request->merge(['slug' => $slug]);
         $retail->fill($request->all())->save();
         if($request->file('file')){
-            $path = Storage::disk('public')->putFile('storage/retailers', $request->file('file'));
-            $retail->fill(['file' => $path])->save();
-
-            if(file_exists($old_path)){
-                Storage::disk('public')->delete($old_path);
-            }
+            //rescatamos las imagenes que se suben en form actualizar
+            $new_files = $request->file('file');
+            //creamos la ruta de guardado en disco
+            $path_save = 'storage/retailers/'.$retail->id;
+             //rescatamos las imagenes subidas anteriormente que se desean reemplazar
+             $images_old = RetailImages::where('retail_id', $retail->id)->get();
+             /* borramos los registros de las rutas de imagenes relacionadas al elemento retail
+             tanto de disco, como en BD */
+             if( $images_old ){
+                foreach($images_old as $image){
+                    Storage::disk('public')->delete($image->path);
+                    $image->delete();
+                }
+             }
+             
+             /*borramos las imagenes recorremos cada imagen de nuestra coleccion para guardar en disco y los path en
+             la tabla correspondiente */
+             foreach($new_files as $key => $file){
+                 $path_file = Storage::disk('public')->putFile($path_save, $file);
+                 $retail_image = RetailImages::create([
+                     'name' => $retail->slug.'-'.($key+1),
+                     'path' => $path_file,
+                     'retail_id' => $retail->id,
+                     'created_at' => $request->created_at,
+                     'updated_at' => $request->updated_at
+                 ]);
+             }
         }
 
         return redirect()->route('retail.edit', $retail->id)
@@ -112,8 +160,13 @@ class RetailController extends Controller
      */
     public function destroy(Retail $retail)
     {
-        if($retail->file){
-            Storage::disk('public')->delete($retail->file);
+        $retail_images = RetailImages::where('retail_id', $retail->id)->get();
+        $path_images_disk = 'storage/retailers/'.$retail->id;
+        if(file_exists($path_images_disk)){
+            foreach($retail_images as $image){
+                Storage::disk('public')->delete( $image->path );
+                $image->delete();
+            }
         }
         $retail->delete();
         return back()->with('info', 'item eliminado con éxito');

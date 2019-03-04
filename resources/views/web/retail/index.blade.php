@@ -21,7 +21,7 @@
 </section>
 <section class="container-fluid pt-4 pb-4 rgba-dark-light">
 <article class="container-fluid article-services-muebleria">
-    <h2 class="h-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
+    <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
     <BR>
     <div class="row d-flex justify-content-center align-items-center">
         <!-- info mueblería retail -->
@@ -170,17 +170,17 @@
 <!-- card content retail -->
 <div class="row mt-5 mb-5">
     <div class="col-md-12">
-        <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
+        <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
-<div class="row ">
+<div class="row">
     @foreach ( $retailers as $retail)
     <div class="col-md-4 mt-4 mb-5">
-        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset( $retail->file ) }});">
+        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset( $retail->images ) }});">
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
                     <h3 class="h3-responsive card-title pt-2"><strong>{{ $retail->title }}</strong></h3>
-                    <a data-fancybox="gallery" data-caption="{{ $retail->description }}" class="btn btn-pink" href="{{ asset( $retail->file ) }}"><i class="fas fa-clone left"></i> Ver más
+                        <a class="btn btn-pink" href="{{ route('ver_retail', $retail->slug) }}"><i class="fas fa-clone left"></i> Ver más
                     </a>
                 </div>
             </div>
