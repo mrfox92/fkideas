@@ -67,6 +67,9 @@
                                     @can('remodelacion_construccion.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.edit', $remodelacion_construccion->id) }}" title="Editar información">Editar</a>
                                     @endcan
+                                    @can('remodelacion_construccion.images.index')
+                                        <a class="btn btn-info btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.images.index', $remodelacion_construccion->id) }}" title="gestion imagenes proyecto remodelacion y construccion">Imagenes</a>
+                                    @endcan
                                     @can('remodelacion_construccion.destroy')
                                     {!! Form::open(['route' => ['remodelacion_construccion.destroy', $remodelacion_construccion->id], 'method' => 'DELETE']) !!}
                                         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}

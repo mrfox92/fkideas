@@ -67,10 +67,10 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    403 - Acción no autorizada
+                    403 - Acceso no autorizado
                 </div>
                 <div class="links">
-                  <a href="{{ route('portada') }}">Ir al Inicio</a>
+                  <a href="{{ route('inicio') }}">volver a inicio</a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
 @section('content')
 <div class="container-fluid content-profile">
     <div class="jumbotron bg-info">
-        <h2 class="h1-responsive text-center">Bienvenido a tu perfil de usuario</h2>
+        <h2 class="h2-responsive text-center">Bienvenido usuario <small>{{ auth()->user()->name }}</small></h2>
     </div>
 </div>
 @endsection

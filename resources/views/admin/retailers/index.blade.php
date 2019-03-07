@@ -67,6 +67,9 @@
                                     @can('retail.edit')
                                     <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('retail.edit', $retail->id) }}" title="Editar información">Editar</a>
                                     @endcan  
+                                    @can('retail.images.index')
+                                    <a class="btn btn-info btn-block mt-2 mb-2" href="{{ route('retail.images.index', $retail->id) }}" title="gestion imagenes proyecto retail">Imagenes</a>
+                                    @endcan
                                     @can('retail.destroy')
                                     {!! Form::open(['route' => ['retail.destroy', $retail->id], 'method' => 'DELETE']) !!}
                                         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}

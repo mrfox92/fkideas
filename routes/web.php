@@ -18,9 +18,7 @@ Auth::routes(['verify' => true]);
 
 
 Route::get('/', 'Web\HomeController@index')->name('inicio');
-Route::get('profile', function(){
-    return view('admin.home');
-})->middleware('verified');
+Route::get('profile', 'Admin\ProfileController@index')->name('perfil')->middleware('verified');
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -104,11 +102,11 @@ Route::middleware(['auth'])->group(function(){
         ->middleware('permission:users.destroy');
     //Retail
     Route::get('gestion-muebleria-retail', 'Admin\RetailController@index')->name('retail.index')
-        ->middleware('permission:retail.index');
+        ->middleware('permission:retail.index');       
     Route::get('gestion-muebleria-retail/create', 'Admin\RetailController@create')->name('retail.create')
         ->middleware('permission:retail.create');
     Route::post('gestion-muebleria-retail/store', 'Admin\RetailController@store')->name('retail.store')
-        ->middleware('permission:retail.create');
+        ->middleware('permission:retail.create'); 
     Route::get('gestion-muebleria-retail/{retail}', 'Admin\RetailController@show')->name('retail.show')
         ->middleware('permission:retail.show');
     Route::get('gestion-muebleria-retail/{retail}/edit', 'Admin\RetailController@edit')->name('retail.edit')
@@ -117,7 +115,21 @@ Route::middleware(['auth'])->group(function(){
         ->middleware('permission:retail.edit');
     Route::delete('gestion-muebleria-retail/{retail}', 'Admin\RetailController@destroy')->name('retail.destroy')
         ->middleware('permission:retail.destroy');
-    
+
+    /* Retail Images */
+    Route::get('gestion-muebleria-retail/galeria/{project}', 'Admin\RetailImageController@show')->name('retail.images.index')
+        ->middleware('permission:retail.images.index');
+    Route::get('gestion-muebleria-retail/galeria/{project}/create', 'Admin\RetailImageController@create')->name('retail.images.create')
+    ->middleware('permission:retail.images.create');
+    Route::post('gestion-muebleria-retail/galeria/store', 'Admin\RetailImageController@store')->name('retail.images.store')
+        ->middleware('permission:retail.images.create');
+    Route::get('gestion-muebleria-retail/galeria/{project}/edit/{image}', 'Admin\RetailImageController@edit')->name('retail.images.edit')
+        ->middleware('permission:retail.images.edit');
+    Route::put('gestion-muebleria-retail/galeria/{image}', 'Admin\RetailImageController@update')->name('retail.images.update')
+        ->middleware('permission:retail.images.edit');
+    Route::delete('gestion-muebleria-retail/galeria/{image}', 'Admin\RetailImageController@destroy')->name('retail.images.destroy')
+        ->middleware('permission:retail.images.destroy');
+
     //info
     Route::get('gestion-informacion-empresa', 'Admin\InfoController@index')->name('info.index')
         ->middleware('permission:info.index');
@@ -159,6 +171,20 @@ Route::middleware(['auth'])->group(function(){
         ->middleware('permission:remodelacion_construccion.edit');
     Route::delete('gestion-remodelacion-construccion/{remodelacion}', 'Admin\RemodelacionConstruccionController@destroy')->name('remodelacion_construccion.destroy')
         ->middleware('permission:remodelacion_construccion.destroy');
+    
+    /* Remodelacion y construccion Images */
+    Route::get('gestion-remodelacion-construccion/galeria/{project}', 'Admin\RemodelacionImagesController@show')->name('remodelacion_construccion.images.index')
+        ->middleware('permission:remodelacion_construccion.images.index');
+    Route::get('gestion-remodelacion-construccion/galeria/{project}/create', 'Admin\RemodelacionImagesController@create')->name('remodelacion_construccion.images.create')
+    ->middleware('permission:remodelacion_construccion.images.create');
+    Route::post('gestion-remodelacion-construccion/galeria/store', 'Admin\RemodelacionImagesController@store')->name('remodelacion_construccion.images.store')
+        ->middleware('permission:remodelacion_construccion.images.create');
+    Route::get('gestion-remodelacion-construccion/galeria//{project}/edit/{image}', 'Admin\RemodelacionImagesController@edit')->name('remodelacion_construccion.images.edit')
+        ->middleware('permission:remodelacion_construccion.images.edit');
+    Route::put('gestion-remodelacion-construccion/galeria/{image}', 'Admin\RemodelacionImagesController@update')->name('remodelacion_construccion.images.update')
+        ->middleware('permission:remodelacion_construccion.images.edit');
+    Route::delete('gestion-remodelacion-construccion/galeria/{image}', 'Admin\RemodelacionImagesController@destroy')->name('remodelacion_construccion.images.destroy')
+        ->middleware('permission:remodelacion_construccion.images.destroy');
 });
 
 

@@ -113,6 +113,31 @@ class PermissionsTableSeeder extends Seeder
             'description'   =>   'Eliminar un proyecto retail del sistema'
         ]);
 
+        /* Imagenes muebleria retail */
+
+        Permission::create([
+            'name'          =>  'Mostrar imagenes muebleria retail',
+            'slug'          =>  'retail.images.index',
+            'description'   =>  'Mostrar imagenes de un proyecto de muebleria retail'
+        ]);
+
+        Permission::create([
+            'name'          =>  'Añadir imagenes muebleria retail',
+            'slug'          =>  'retail.images.create',
+            'description'   =>  'Añadir una o varias imagenes a un proyecto de muebleria retail'
+        ]);
+        Permission::create([
+            'name'          =>  'Editar imagenes muebleria retail',
+            'slug'          =>  'retail.images.edit',
+            'description'   =>  'Subir y reemplazar una imagen de un proyecto de muebleria retail'
+        ]);
+
+        Permission::create([
+            'name'          =>  'Eliminar imagenes muebleria retail',
+            'slug'          =>  'retail.images.destroy',
+            'description'   =>  'Eliminar una o varias imagenes de un proyecto de muebleria retail'
+        ]);
+
         //Aseo industrial
         Permission::create([
             'name'          =>   'Listar proyectos aseo industrial',
@@ -168,6 +193,31 @@ class PermissionsTableSeeder extends Seeder
             'name'          =>   'Eliminar proyecto remodelacion y construccion',
             'slug'          =>   'remodelacion_construccion.destroy',
             'description'   =>   'Eliminar un proyectos de remodelación y construcción del sistema'
+        ]);
+
+        /* Imagenes remodelacion y construccion */
+
+        Permission::create([
+            'name'          =>  'Mostrar imagenes remodelacion y construccion',
+            'slug'          =>  'remodelacion_construccion.images.index',
+            'description'   =>  'Mostrar imagenes de un proyecto de muebleria remodelacion y construccion'
+        ]);
+
+        Permission::create([
+            'name'          =>  'Añadir imagenes remodelacion y construccion',
+            'slug'          =>  'remodelacion_construccion.images.create',
+            'description'   =>  'Añadir una o varias imagenes a un proyecto de remodelacion y construccion'
+        ]);
+        Permission::create([
+            'name'          =>  'Editar imagenes remodelacion y construccion',
+            'slug'          =>  'remodelacion_construccion.images.edit',
+            'description'   =>  'Subir y reemplazar una imagen de un proyecto de remodelacion y construccion'
+        ]);
+
+        Permission::create([
+            'name'          =>  'Eliminar imagenes remodelacion y construccion',
+            'slug'          =>  'remodelacion_construccion.images.destroy',
+            'description'   =>  'Eliminar una o varias imagenes de un proyecto de remodelacion y construccion'
         ]);
         
 
