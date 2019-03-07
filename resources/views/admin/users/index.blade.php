@@ -55,15 +55,15 @@
                                 <td >{{ $user->email }}</td>
                                 <td>
                                     @can('users.show')
-                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('users.show', $user->id) }}" title="Ver detalle">Ver</a>
+                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('users.show', $user->id) }}" title="Ver detalle"><i class="far fa-eye"></i> Ver</a>
                                     @endcan
                                     @can('users.edit')
-                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('users.edit', $user->id) }}" title="Editar información">Editar</a>
+                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('users.edit', $user->id) }}" title="Editar información"><i class="far fa-edit"></i> Editar</a>
                                     @endcan  
                                     @can('users.destroy')
                                     {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'DELETE']) !!}
                                         <button class="btn btn-danger btn-block">
-                                            Eliminar
+                                        <i class="far fa-trash-alt"></i> Eliminar
                                         </button>
                                     {!! Form::close() !!}
                                     @endcan

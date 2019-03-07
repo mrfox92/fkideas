@@ -59,10 +59,10 @@
                                 <td >{{ $info->location }}</td>
                                 <td>
                                     @can('info.show')
-                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('info.show', $info->id) }}" title="Ver detalle">Ver</a>
+                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('info.show', $info->id) }}" title="Ver detalle"><i class="far fa-eye"></i> Ver</a>
                                     @endcan
                                     @can('info.edit')
-                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('info.edit', $info->id) }}" title="Editar información">Editar</a>
+                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('info.edit', $info->id) }}" title="Editar información"><i class="far fa-edit"></i> Editar</a>
                                     @endcan
                                 </td>
                             </tr>

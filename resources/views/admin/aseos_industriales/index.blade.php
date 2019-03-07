@@ -40,7 +40,7 @@
             <div class="card mt-4 mb-5">
                 <div class="card-header">
                     @can('aseo_industrial.create')
-                    <a class="btn btn-primary float-right" href="{{ route('aseo_industrial.create') }}">Crear nuevo</a>
+                    <a class="btn btn-primary float-right" href="{{ route('aseo_industrial.create') }}"><i class="fas fa-folder-plus"></i> Crear nuevo</a>
                     @endcan
                 </div>
                 <div class="card-body">
@@ -62,15 +62,17 @@
                                 <td class="text-lowercase">{{ $aseo_industrial->status }}</td>
                                 <td>
                                     @can('aseo_industrial.show')
-                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('aseo_industrial.show', $aseo_industrial->id) }}" title="Ver detalle">Ver</a>
+                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('aseo_industrial.show', $aseo_industrial->id) }}" title="Ver detalle"><i class="far fa-eye"></i> Ver</a>
                                     @endcan
                                     @can('aseo_industrial.edit')
-                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('aseo_industrial.edit', $aseo_industrial->id) }}" title="Editar información">Editar</a>
+                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('aseo_industrial.edit', $aseo_industrial->id) }}" title="Editar información"><i class="far fa-edit"></i> Editar</a>
                                     @endcan
                                     @can('aseo_industrial.destroy')
-                                    {!! Form::open(['route' => ['aseo_industrial.destroy', $aseo_industrial->id], 'method' => 'DELETE']) !!}
-                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}
-                                    {!! Form::close() !!}
+                                        {!! Form::open(['route' => ['aseo_industrial.destroy', $aseo_industrial->id], 'method' => 'DELETE']) !!}
+                                        <button class="btn btn-danger btn-block mt-2 mb-2">
+                                            <i class="far fa-trash-alt"></i> Eliminar
+                                        </button>
+                                        {!! Form::close() !!}
                                     @endcan
                                 </td>
                             </tr>

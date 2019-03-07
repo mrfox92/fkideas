@@ -60,15 +60,15 @@
                                 <td >{{ $role->description }}</td>
                                 <td>
                                     @can('roles.show')
-                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('roles.show', $role->id) }}" title="Ver detalle">Ver</a>
+                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('roles.show', $role->id) }}" title="Ver detalle"><i class="far fa-eye"></i> Ver</a>
                                     @endcan
                                     @can('roles.edit')
-                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('roles.edit', $role->id) }}" title="Editar información">Editar</a>
+                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('roles.edit', $role->id) }}" title="Editar información"><i class="far fa-edit"></i> Editar</a>
                                     @endcan  
                                     @can('roles.destroy')
                                     {!! Form::open(['route' => ['roles.destroy', $role->id], 'method' => 'DELETE']) !!}
                                         <button class="btn btn-danger btn-block">
-                                            Eliminar
+                                        <i class="far fa-trash-alt"></i> Eliminar
                                         </button>
                                     {!! Form::close() !!}
                                     @endcan

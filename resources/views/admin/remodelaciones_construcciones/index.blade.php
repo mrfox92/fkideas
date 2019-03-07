@@ -40,7 +40,7 @@
             <div class="card mt-4 mb-5">
                 <div class="card-header">
                     @can('remodelacion_construccion.create')
-                    <a class="btn btn-primary float-right" href="{{ route('remodelacion_construccion.create') }}">Crear nuevo</a>
+                    <a class="btn btn-primary float-right" href="{{ route('remodelacion_construccion.create') }}"><i class="fas fa-folder-plus"></i> Crear nuevo</a>
                     @endcan
                 </div>
                 <div class="card-body">
@@ -62,18 +62,20 @@
                                 <td class="text-lowercase">{{ $remodelacion_construccion->status }}</td>
                                 <td>
                                     @can('remodelacion_construccion.show')
-                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.show', $remodelacion_construccion->id) }}" title="Ver detalle">Ver</a>
+                                    <a class="btn btn-success btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.show', $remodelacion_construccion->id) }}" title="Ver detalle"><i class="far fa-eye"></i> Ver</a>
                                     @endcan
                                     @can('remodelacion_construccion.edit')
-                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.edit', $remodelacion_construccion->id) }}" title="Editar información">Editar</a>
+                                    <a class="btn btn-primary btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.edit', $remodelacion_construccion->id) }}" title="Editar información"><i class="far fa-edit"></i> Editar</a>
                                     @endcan
                                     @can('remodelacion_construccion.images.index')
-                                        <a class="btn btn-info btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.images.index', $remodelacion_construccion->id) }}" title="gestion imagenes proyecto remodelacion y construccion">Imagenes</a>
+                                        <a class="btn btn-info btn-block mt-2 mb-2" href="{{ route('remodelacion_construccion.images.index', $remodelacion_construccion->id) }}" title="gestion imagenes proyecto remodelacion y construccion"><i class="far fa-images"></i> Imagenes</a>
                                     @endcan
                                     @can('remodelacion_construccion.destroy')
-                                    {!! Form::open(['route' => ['remodelacion_construccion.destroy', $remodelacion_construccion->id], 'method' => 'DELETE']) !!}
-                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block btn-lg mt-2 mb-2', 'title' => 'Eliminar']) !!}
-                                    {!! Form::close() !!}
+                                        {!! Form::open(['route' => ['remodelacion_construccion.destroy', $remodelacion_construccion->id], 'method' => 'DELETE']) !!}
+                                            <button class="btn btn-danger btn-block mt-2 mb-2">
+                                            <i class="far fa-trash-alt"></i> Eliminar
+                                            </button>
+                                        {!! Form::close() !!}
                                     @endcan
                                 </td>
                             </tr>
