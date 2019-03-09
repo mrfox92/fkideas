@@ -175,47 +175,26 @@
         <!-- Grid row -->
         <div class="row">
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-                <ul class="list-unstyled text-center">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
-
+            <div class="col-md-4 d-flex justify-content-center align-self-center">
+                <img class="nav-link logo" src="{{ asset('storage/images/logo-1.png') }}" alt="logo fkideas">
             </div>
             <!-- Grid column -->
-
+            <hr class="clearfix w-100 d-md-none pb-3">
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
+            <div class="col-md-4 align-self-center">
 
                 <!-- Links -->
-                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
+                <h5 class="h3-responsive text-center font-weight-bold">Información de contacto</h5>
 
                 <ul class="list-unstyled text-center">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <span><i class="fas fa-phone-square"></i> {{ $info->contact_number }}</span>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <span><i class="far fa-envelope"></i> {{ $info->email }}</span>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
+                        <span><i class="fas fa-map-marker-alt"></i> {{ $info->location }}</span>
                     </li>
                 </ul>
 
@@ -225,50 +204,10 @@
             <hr class="clearfix w-100 d-md-none pb-3">
 
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-                <ul class="list-unstyled text-center">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="h3-responsive text-center font-weight-bold">Enlaces</h5>
-
-                <ul class="list-unstyled text-center">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
-
+            <div class="col-md-4 mt-2 mb-4 align-self-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.8086588523674!2d-70.65842458504254!3d-33.402155802420964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c677949cbed5%3A0xb0e65a528b68d410!2sEl+Roble+1142%2C+Recoleta%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1552099003616" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
             </div>
             <!-- Grid column -->
 

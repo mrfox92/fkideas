@@ -20,10 +20,24 @@
         </ol>
     </nav>
     <div class="row">
+        <div class="col-md-12">
+            <p class="h6-responsive text-justify mt-4 mb-4 wow fadeInUp">
+                {{ $remodelacion_construccion->description }}
+            </p>
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-md-12">
+            <span class="h6-responsive text-justify wow fadeInUp">
+                <i class="fas fa-map-marker-alt"></i> {{ $remodelacion_construccion->location }}
+            </span>
+        </div>
+    </div>
+    <div class="row">
         @foreach ( $remodelacion_construccion->images as $item)
         <div class="col-md-4 mt-4 mb-5">
             <div class="card wow fadeInUp">
-                <a data-fancybox="gallery" data-caption="{{ $remodelacion_construccion->description }}" href="{{ asset( $item->path ) }}">
+                <a data-fancybox="gallery" href="{{ asset( $item->path ) }}">
                     <img class="img-fluid" src="{{ asset($item->path) }}" alt="{{ $item->name }}">
                 </a>
             </div>
