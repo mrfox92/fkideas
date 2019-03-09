@@ -26,7 +26,7 @@
             </div>
         </div>
 </div>
-<section class="jumbotron bg-info m-0">
+<section class="bg-customize m-0">
     <div class="header text-center">
     <i class="far fa-lightbulb wow bounceInUp"></i>       
     <h2 class="h2-responsive text-center wow fadeInUp">"La idea es una experiencia más allá de las tendencias"</h2>
