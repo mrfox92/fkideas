@@ -117,7 +117,7 @@
                     data-fancybox="images-preview{{ $id }}"
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $remodelacion_construccion->description }}">
-                        <h3 class="h3-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
+                        <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
                         <img class="img-fluid" src="{{ asset( $image->path ) }}" />
                     </a>
                 @else

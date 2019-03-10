@@ -43,7 +43,7 @@
                     data-fancybox="images-preview"
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $remodelacion->description }}">
-                        <h3 class="h3-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion->title }}</strong></h3>
+                        <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion->title }}</strong></h3>
                         <img class="img-fluid" src="{{ asset( $image->path ) }}" />
                     </a>
                 @else
