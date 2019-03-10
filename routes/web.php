@@ -48,10 +48,6 @@ Route::get('servicio-remodelacion-y-construccion', 'Web\RemodelacionConstruccion
     ->name('remodelacion_construccion');
 Route::get('nosotros', 'Web\NosotrosController@index')->name('nosotros');
 Route::post('formSubmit', 'Web\ContactoController@formSubmit');
-Route::get('servicio-muebleria-retail/{slug}', 'Web\MuebleriaRetailController@show')->name('ver_retail');
-Route::get('servicio-remodelacion-y-construccion/{slug}', 'Web\RemodelacionConstruccionController@show')
-    ->name('ver_remodelacion_construccion');
-
 
 /* routes resources, middleware auth group and permissions*/
 

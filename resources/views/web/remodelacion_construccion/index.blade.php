@@ -106,21 +106,34 @@
         <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
-<div class="row">
-    @foreach ( $remodelaciones_construcciones as $remodelacion_construccion)
-    <div class="col-lg-4 col-md-6 mt-4 mb-5">
-        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset($remodelacion_construccion->images) }});">
-            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                <div>
-                    <h3 class="h3-responsive card-title pt-2"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
-                        <a class="btn btn-pink" href="{{ route('ver_remodelacion_construccion', $remodelacion_construccion->slug) }}"><i class="fas fa-clone left"></i> Ver más
+<!-- lightbox projects-->
+<div class="container-fluid">
+    <div class="row">
+        @foreach ( $remodelaciones_construcciones as $id => $remodelacion_construccion)
+        <div class="col-md-4 col-ms-6 col-12 mt-4 mb-5">
+            @foreach( $remodelacion_construccion->images as $key => $image )
+                @if( $key === 0 )
+                    <a class="card card-image wow fadeInUp grey-text" href="{{ asset( $image->path ) }}" 
+                    data-fancybox="images-preview{{ $id }}"
+                    data-thumbs='{"autoStart":true}'
+                    data-caption="{{ $remodelacion_construccion->description }}">
+                        <h3 class="h3-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
+                        <img class="img-fluid" src="{{ asset( $image->path ) }}" />
                     </a>
-                </div>
-            </div>
+                @else
+                    <div style="display: none;">
+                        <a href="{{ asset( $image->path) }}" data-fancybox="images-preview{{ $id }}"
+                            data-thumb="{{ asset( $image->path ) }}"
+                            data-caption="{{ $remodelacion_construccion->description }}">
+                        </a>
+                    </div>
+                @endif
+            @endforeach
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
+<!-- fin lightbox projects -->
 <div class="row">
     <div class="col-md-12">
         {{ $remodelaciones_construcciones->render() }}

@@ -18,28 +18,10 @@ class MuebleriaRetailController extends Controller
     public function index()
     {
         $retailers = Retail::orderBy('id', 'DESC')->where('status', 'PUBLICADO')->paginate(6);
-        //rescatar primera imagen relacionada para cada proyecto retail
         foreach($retailers as $key => $retail){
-            $retail->images = RetailImages::where('retail_id', $retail->id)->pluck('path')->first();
+            $retail->images = RetailImages::where('retail_id', $retail->id)->get();
         }
 
         return view('web.retail.index', compact('retailers'));
-    }
-    
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($slug)
-    {
-        $retail = Retail::where('slug', $slug)->first();
-        if($retail){
-            $retail->images = RetailImages::where('retail_id', $retail->id)->get();
-            return view('web.retail.show', compact('retail'));
-        }else{
-            return view('errors.404');
-        }
     }
 }

@@ -20,25 +20,8 @@ class RemodelacionConstruccionController extends Controller
             ->where('status', 'PUBLICADO')
             ->paginate(6);
         foreach($remodelaciones_construcciones as $remodelacion_construccion){
-            $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->pluck('path')->first();
+            $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->get();
         }        
         return view('web.remodelacion_construccion.index', compact('remodelaciones_construcciones'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($slug)
-    {
-        $remodelacion_construccion = RemodelacionConstruccion::where('slug', $slug)->first();
-        if($remodelacion_construccion){
-            $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->get();
-            return view('web.remodelacion_construccion.show', compact('remodelacion_construccion'));
-        }else{
-            return view('errors.404');
-        }
     }
 }

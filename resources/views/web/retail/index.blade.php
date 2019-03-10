@@ -173,20 +173,31 @@
         <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
     </div>
 </div>
-<div class="row">
-    @foreach ( $retailers as $retail)
-    <div class="col-md-4 mt-4 mb-5">
-        <div class="card card-image wow fadeInUp" style="background-image: url({{ asset( $retail->images ) }});">
-            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                <div>
-                    <h3 class="h3-responsive card-title pt-2"><strong>{{ $retail->title }}</strong></h3>
-                        <a class="btn btn-pink" href="{{ route('ver_retail', $retail->slug) }}"><i class="fas fa-clone left"></i> Ver más
+<div class="container-fluid">
+    <div class="row">
+        @foreach ( $retailers as $id => $retail)
+        <div class="col-md-4 col-ms-6 col-12 mt-4 mb-5">
+            @foreach( $retail->images as $key => $image )
+                @if( $key === 0 )
+                    <a class="card card-image wow fadeInUp grey-text" href="{{ asset( $image->path ) }}" 
+                    data-fancybox="images-preview{{ $id }}"
+                    data-thumbs='{"autoStart":true}'
+                    data-caption="{{ $retail->description }}">
+                        <h3 class="h3-responsive font-weight-bold text-center card-title py-4"><strong>{{ $retail->title }}</strong></h3>
+                        <img class="img-fluid" src="{{ asset( $image->path ) }}" />
                     </a>
-                </div>
-            </div>
+                @else
+                    <div style="display: none;">
+                        <a href="{{ asset( $image->path) }}" data-fancybox="images-preview{{ $id }}"
+                            data-thumb="{{ asset( $image->path ) }}"
+                            data-caption="{{ $retail->description }}">
+                        </a>
+                    </div>
+                @endif
+            @endforeach
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 <div class="row">
     <div class="col-md-12">
@@ -194,9 +205,5 @@
     </div>
 </div>
 <!-- card content retail -->
-
-<!-- clients -->
-
-<!-- clients -->
 </section>
 @endsection
