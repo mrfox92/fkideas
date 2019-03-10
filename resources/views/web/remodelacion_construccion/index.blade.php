@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- sección remodelación y construcción -->
-<section class="view parallax-remodelacion-bg" style="background-image: url({{ asset('storage/images/diseno.jpg')}});">
+<section class="view parallax-remodelacion-bg" style="background-image: url({{ asset('storage/images/diseno.jpg') }});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
         <div class="rgba-white-strong wow fadeIn py-4">
             <div class="row d-flex justify-content-center align-items-center">

@@ -4,7 +4,7 @@
 @endsection
 @extends('layouts.app')
 @section('content')
-<section class="view parallax-muebleria-bg" style="background-image: url({{ asset( $retail->images->first()->path )}});">
+<section class="view parallax-muebleria-bg" style="background-image: url({{ asset( 'storage/images/Madera-4.jpg' )}});">
     <div class="mask flex-center rgba-black-light d-flex justify-content-center align-items-center">
         <div class="rgba-white-strong wow fadeIn py-4">
             <div class="row d-flex justify-content-center align-items-center">
@@ -23,17 +23,30 @@
             <li class="breadcrumb-item h6-responsive active">{{ $retail->title }} <small>(vista demo)</small></li>
         </ol>
     </nav>
+<div class="container-fluid">
     <div class="row">
-        @foreach ( $retail->images as $item)
-        <div class="col-md-4 mt-4 mb-5">
-            <div class="card">
-                <a data-fancybox="gallery" data-caption="{{ $retail->description }}" href="{{ asset( $item->path ) }}">
-                    <img class="img-fluid" src="{{ asset($item->path) }}" alt="{{ $item->name }}">
-                </a>
-            </div>
+        <div class="col-md-4 col-ms-6 col-12 mt-4 mb-5">
+            @foreach( $retail->images as $key => $image )
+                @if( $key === 0 )
+                    <a class="card card-image wow fadeInUp grey-text" href="{{ asset( $image->path ) }}" 
+                    data-fancybox="images-preview"
+                    data-thumbs='{"autoStart":true}'
+                    data-caption="{{ $retail->description }}">
+                        <h3 class="h3-responsive font-weight-bold text-center card-title py-4"><strong>{{ $retail->title }}</strong></h3>
+                        <img class="img-fluid" src="{{ asset( $image->path ) }}" />
+                    </a>
+                @else
+                    <div style="display: none;">
+                        <a href="{{ asset( $image->path) }}" data-fancybox="images-preview"
+                            data-thumb="{{ asset( $image->path ) }}"
+                            data-caption="{{ $retail->description }}">
+                        </a>
+                    </div>
+                @endif
+            @endforeach
         </div>
-        @endforeach
     </div>
+</div>
 </article>
 </section>
 @endsection
