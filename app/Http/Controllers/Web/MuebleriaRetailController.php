@@ -21,7 +21,11 @@ class MuebleriaRetailController extends Controller
         foreach($retailers as $key => $retail){
             $retail->images = RetailImages::where('retail_id', $retail->id)->get();
         }
+        //title
+        $title_retail = "Muebleria retail";
+        //metadatos
+        $meta_description = "Creamos experiencias únicas en tus ambientes. Somos especialistas en proyectos mobiliarios, te ofrecemos la mejor opción según tus necesidades.";
 
-        return view('web.retail.index', compact('retailers'));
+        return view('web.retail.index', compact('retailers', 'title_retail', 'meta_description'));
     }
 }

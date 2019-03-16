@@ -1,3 +1,9 @@
+@section('title')
+<title>Fkideas diseño y construcción S.P.A</title>
+@endsection
+@section('metadata')
+<meta name="description" content="{{ $info->description }}">
+@endsection
 @extends('layouts.app')
 @section('content')
 <div class="view cabecera" style="background-image: url({{ asset('storage/images/fondo.jpg')}});">

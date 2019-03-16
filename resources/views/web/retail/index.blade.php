@@ -1,3 +1,9 @@
+@section('title')
+<title>{{ $title_retail }}</title>
+@endsection
+@section('metadata')
+<meta name="description" content="{{ $meta_description }}">
+@endsection
 @extends('layouts.app')
 @section('content')
 <!-- sección mueblería retail -->
@@ -19,6 +25,15 @@
         </div>
     </div>
 </section>
+<div class="container-fluid jumbotron bg-dark text-white m-0">
+    <p class="h5-responsive text-justify wow fadeInUp">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui reiciendis iusto sit quae
+        sint, veniam laudantium sapiente quaerat dicta eaque porro vitae ipsum sed obcaecati at
+        deleniti dolor ad nisi.Sed, temporibus ullam repellat blanditiis facilis earum inventore
+        repudiandae ducimus placeat ea odit incidunt ipsam quam sit a distinctio quae necessitatibus
+        laudantium officiis. Ea enim alias aliquid, tempora magni eligendi!
+    </p>
+</div>
 <section class="container-fluid pt-4 pb-4 rgba-dark-light">
 <article class="container-fluid article-services-muebleria">
     <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Servicios Mueblería Retail</h2>
