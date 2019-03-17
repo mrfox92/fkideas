@@ -195,6 +195,16 @@ footer {
 }
 
 
+/* hr nosotros */
+
+.bottom-client {
+    width: 25%;
+    height: 1px;
+    margin: 0px auto;
+    background-color: rgba(76, 76, 76, 0.685);
+}
+
+
 /* Estilos ventanas informativas */
 
 .toast-title {

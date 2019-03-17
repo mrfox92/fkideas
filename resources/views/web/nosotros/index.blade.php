@@ -89,29 +89,25 @@
     <article class="container-fluid mt-0 mb-4">
         <div class="row d-flex justify-content-center align-items-center mt-4 mb-5">
             <div class="col-md-12 mt-5 mb-4">
-                <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp">Clientes que han confiado</h2>
+                <h2 class="h2-responsive text-center font-weight-bold wow fadeIn">Clientes que han confiado</h2>
+                <hr class="bottom-client wow fadeInLeft">
             </div>
         </div>
+        <br>
         <hr>
         <!-- logos empresas y clientes -->
         <div class="clientes-servicios-nosotros row d-flex justify-content-around align-items-center">
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-soundcloud"></i>
+            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+                <img class="img-fluid" src="{{ asset('storage/images/jumbo.png') }}" alt="cliente fkideas jumbo">
             </div>
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-apple"></i>
+            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+                <img class="img-fluid" src="{{ asset('storage/images/bruker.png') }}" alt="cliente fkideas bruker">
             </div>
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-ebay"></i>
+            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+                <img class="img-fluid" src="{{ asset('storage/images/privilege.png') }}" alt="cliente fkideas privilege">
             </div>
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-fedex"></i>
-            </div>
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-earlybirds"></i>
-            </div>
-            <div class="col-md-2 col-sm-2 col-2 mt-3 mb-4 d-flex justify-content-around align-items-center">
-                <i class="fab fa-grav"></i>
+            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+                <img class="img-fluid" src="{{ asset('storage/images/skechers.png') }}" alt="cliente fkideas skechers">
             </div>
         </div>
         <!-- logos empresas y clientes -->
