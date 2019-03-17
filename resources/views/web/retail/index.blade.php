@@ -190,7 +190,7 @@
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $retail->description }}">
                         <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $retail->title }}</strong></h3>
-                        <img class="img-fluid" src="{{ asset( $image->path ) }}" />
+                        <img class="img-fluid" src="{{ asset( $image->path ) }}" alt="{{ $retail->title }}"/>
                     </a>
                 @else
                     <div style="display: none;">

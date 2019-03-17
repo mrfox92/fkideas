@@ -44,7 +44,7 @@
         <div class="row d-flex justify-content-around align-items-center">
             <div class="col-md-4 col-sm-6 col-12 d-flex justify-content-around align-items-center mt-3 mb-4">
                 <div class="card wow fadeInUp">
-                    <img class="card-img-top" src="{{ asset('storage/images/team1.jpg') }}" alt="imagen cargo 1">
+                    <img class="card-img-top" src="{{ asset('storage/images/team1.jpg') }}" alt="imagen cargo 1 fkideas">
                     <div class="card-body">
                         <h5 class="h5-responsive card-title text-center">Nombre</h5>
                         <h6 class="h6-responsive card-text text-center">Cargo</h6>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-12 d-flex justify-content-around align-items-center mt-3 mb-4">
                 <div class="card wow fadeInUp">
-                    <img class="card-img-top" src="{{ asset('storage/images/team2.jpg') }}" alt="imagen cargo 1">
+                    <img class="card-img-top" src="{{ asset('storage/images/team2.jpg') }}" alt="imagen cargo 2 fkideas">
                     <div class="card-body">
                         <h5 class="h5-responsive card-title text-center">Nombre</h5>
                         <h6 class="h6-responsive card-text text-center">Cargo</h6>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-12 d-flex justify-content-around align-items-center mt-3 mb-4">
                 <div class="card wow fadeInUp">
-                    <img class="card-img-top" src="{{ asset('storage/images/team3.jpg') }}" alt="imagen cargo 1">
+                    <img class="card-img-top" src="{{ asset('storage/images/team3.jpg') }}" alt="imagen cargo 3 fkideas">
                     <div class="card-body">
                         <h5 class="h5-responsive card-title text-center">Nombre</h5>
                         <h6 class="h6-responsive card-text text-center">Cargo</h6>
@@ -75,7 +75,7 @@
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-md-12 mt-3 mb-4">
                 <div class="card wow fadeInUp">
-                    <img class="card-img-top" src="{{ asset('storage/images/ejemplo-4.png') }}" alt="imagen cargo 1">
+                    <img class="card-img-top" src="{{ asset('storage/images/ejemplo-4.png') }}" alt="imagen trabajadores fkideas">
                     <div class="card-body">
                         <h5 class="h5-responsive card-title text-center">Nuestros Trabajadores</h5>
                     </div>

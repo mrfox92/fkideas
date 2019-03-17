@@ -124,7 +124,7 @@
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $remodelacion_construccion->description }}">
                         <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
-                        <img class="img-fluid" src="{{ asset( $image->path ) }}" />
+                        <img class="img-fluid" src="{{ asset( $image->path ) }}" alt="{{ $remodelacion_construccion->title }}"/>
                     </a>
                 @else
                     <div style="display: none;">
