@@ -62,65 +62,37 @@
     </div> 
         <!-- sección info desplegable íconos -->
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-12 col-12">
                 <div class="collapse multi-collapse-3" id="titulo-1">
                     <div class="card-body">
                         <h2 class="h2-responsive text-center">Aseo Industrial</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-3" id="texto-1">
-                    <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-12 col-12">
                 <div class="collapse multi-collapse" id="titulo-2">
                     <div class="card-body">
                         <h2 class="h2-responsive text-center">Lavado de Pisos</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse" id="texto-2">
-                    <div class="card-body text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-12 col-12">
                 <div class="collapse multi-collapse-1" id="titulo-3">
                     <div class="card-body">
                         <h2 class="h2-responsive text-center">Lavado de Alfombras</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-1" id="texto-3">
-                    <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-12 col-12">
                 <div class="collapse multi-collapse-2" id="titulo-4">
                     <div class="card-body">
                         <h2 class="h2-responsive text-center">Tratamiento Especial de Pisos</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                <div class="collapse multi-collapse-2" id="texto-4">
-                    <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
                     </div>
                 </div>
             </div>

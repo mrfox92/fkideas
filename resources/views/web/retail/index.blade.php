@@ -86,7 +86,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-3" id="texto-muebleria">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        Fabricamos muebles que expresan tu identidad única
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-1" id="texto-acrilico-vidrio">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        Maestros expertos en acabados de calidad
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-4" id="texto-store">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        Diseñamos y remodelamos el mejor espacio para tu público
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-3" id="texto-1">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        Somos el aliado para impulsar tu marca o producto
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse" id="texto-2">
                     <div class="card-body text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
+                        Estrategias 2.0 para tu público objetivo
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="texto-4">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        Creamos experiencias pensando en los usuarios
                     </div>
                 </div>
             </div>
