@@ -138,8 +138,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fab fa-twitter"></i>
+                            <a class="nav-link" href="https://api.whatsapp.com/send?phone={{ $info->contact_number }}&text=Hola fkideas!" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
                     </ul>
