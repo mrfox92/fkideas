@@ -33,7 +33,7 @@
         <!-- info aseo industrial-->
         <div class="col-md-2 col-sm-2 col-2 d-flex justify-content-center align-items-center wow fadeInUp">
             <a role="button" data-toggle="collapse" data-target=".multi-collapse-3" aria-expanded="false" aria-controls="titulo-1 texto-1">
-                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/entrega-final-obras.png') }}" alt="icono entrega final de obras">
+                <img class="iconos" src="{{ asset('storage/icons/aseo-industrial/entrega-final-obras.png') }}" alt="icono servicio aseo industrial">
             </a>
         </div>
         <!-- info aseo industrial-->
