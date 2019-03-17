@@ -1,3 +1,9 @@
+@section('title')
+<title>{{ $title_nosotros }}</title>
+@endsection
+@section('metadata')
+<meta name="description" content="{{ $meta_description }}">
+@endsection
 @extends('layouts.app')
 @section('content')
 <div class="view parallax-nosotros-header" style="background-image: url({{ asset('storage/images/nosotros.png')}});">

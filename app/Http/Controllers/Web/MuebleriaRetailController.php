@@ -24,7 +24,7 @@ class MuebleriaRetailController extends Controller
         //title
         $title_retail = "Muebleria retail";
         //metadatos
-        $meta_description = "Creamos experiencias únicas en tus ambientes. Somos especialistas en proyectos mobiliarios, te ofrecemos la mejor opción según tus necesidades.";
+        $meta_description = "Fabricamos muebles para retail en santiago, creamos experiencias únicas en tus ambientes y te ofrecemos la mejor opción según tus necesidades.";
 
         return view('web.retail.index', compact('retailers', 'title_retail', 'meta_description'));
     }

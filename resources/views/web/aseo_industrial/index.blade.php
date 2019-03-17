@@ -1,3 +1,9 @@
+@section('title')
+<title>{{ $title_aseo }}</title>
+@endsection
+@section('metadata')
+<meta name="description" content="{{ $meta_description }}">
+@endsection
 @extends('layouts.app')
 @section('content')
 <!-- sección mueblería retail -->

@@ -22,6 +22,10 @@ class RemodelacionConstruccionController extends Controller
         foreach($remodelaciones_construcciones as $remodelacion_construccion){
             $remodelacion_construccion->images = RemodelacionConstruccionImages::where('remodelacion_id', $remodelacion_construccion->id)->get();
         }        
-        return view('web.remodelacion_construccion.index', compact('remodelaciones_construcciones'));
+
+        $title_remodelacion = "Remodelación y Construcciones menores";
+        $meta_description = "En nuestros servicios de remodelación y construcción ponemos a tu disposición las herramientas creativas que necesitas para impulsar tu marca.";
+
+        return view('web.remodelacion_construccion.index', compact('remodelaciones_construcciones', 'title_remodelacion', 'meta_description'));
     }
 }
