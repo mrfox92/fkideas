@@ -1,3 +1,6 @@
+@section('title')
+<title>Acceso fkideas</title>
+@endsection
 @extends('layouts.app')
 
 @section('content')

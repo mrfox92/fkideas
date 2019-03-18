@@ -97,16 +97,16 @@
         <hr>
         <!-- logos empresas y clientes -->
         <div class="clientes-servicios-nosotros row d-flex justify-content-around align-items-center">
-            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+            <div class="col-md-2 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
                 <img class="img-fluid" src="{{ asset('storage/images/jumbo.png') }}" alt="cliente fkideas jumbo">
             </div>
-            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+            <div class="col-md-2 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
                 <img class="img-fluid" src="{{ asset('storage/images/bruker.png') }}" alt="cliente fkideas bruker">
             </div>
-            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+            <div class="col-md-2 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
                 <img class="img-fluid" src="{{ asset('storage/images/privilege.png') }}" alt="cliente fkideas privilege">
             </div>
-            <div class="col-md-3 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
+            <div class="col-md-2 col-sm-3 col-3 mt-3 mb-4 d-flex justify-content-around align-items-center">
                 <img class="img-fluid" src="{{ asset('storage/images/skechers.png') }}" alt="cliente fkideas skechers">
             </div>
         </div>
