@@ -20,6 +20,8 @@ class InfoComposer
      */
     public function compose(View $view)
     {
+        $this->info->meta_description = "fkideas es una empresa de fabricación de muebles para retail en santiago, servicios de aseo industrial, remodelación y construcciones menores.";
+
         $view->with('info', $this->info);
     }
 }

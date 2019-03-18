@@ -2,7 +2,7 @@
 <title>Fkideas diseño y construcción S.P.A</title>
 @endsection
 @section('metadata')
-<meta name="description" content="{{ $info->description }}">
+<meta name="description" content="{{ $info->meta_description }}">
 @endsection
 @extends('layouts.app')
 @section('content')
