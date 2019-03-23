@@ -46,27 +46,27 @@
                         @guest
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('muebleria_retail') }}">
+                                <a class="nav-link text-uppercase font-weight-bold" href="{{ route('muebleria_retail') }}">
                                    Mueblería retail
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('aseo_industrial') }}">
+                                <a class="nav-link text-uppercase font-weight-bold" href="{{ route('aseo_industrial') }}">
                                     Aseo industrial
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('remodelacion_construccion') }}">
+                                <a class="nav-link text-uppercase font-weight-bold" href="{{ route('remodelacion_construccion') }}">
                                     Remodelación y construcción
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('nosotros') }}">
+                                <a class="nav-link text-uppercase font-weight-bold" href="{{ route('nosotros') }}">
                                     Nosotros
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="modal" data-target="#modalContactForm">
+                                <a class="nav-link text-uppercase font-weight-bold" data-toggle="modal" data-target="#modalContactForm">
                                     Contacto
                                 </a>
                             </li>
