@@ -1821,17 +1821,24 @@ __webpack_require__.r(__webpack_exports__);
         this.loaded = false;
         this.success = false;
         this.errors = {};
+        $('#enviar').val('Procesando...');
         axios.post('formSubmit', this.fields).then(function (response) {
-          _this.fields = {};
-          _this.loaded = true;
-          _this.success = true;
-          toastr.success('Su Mensaje ha sido enviado');
+          setTimeout(function () {
+            $('#enviar').val('Enviar Mensaje');
+            _this.fields = {};
+            _this.loaded = true;
+            _this.success = true;
+          }, 1000);
           $('#modalContactForm').modal('hide');
+          toastr.success('Su Mensaje ha sido enviado');
         }).catch(function (error) {
           _this.loaded = false;
 
           if (error.response.status === 422) {
             _this.errors = error.response.data.errors || {};
+            setTimeout(function () {
+              $('#enviar').val('Enviar Mensaje');
+            }, 300);
           }
         });
       }
@@ -37092,7 +37099,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-group" }, [
       _c("input", {
         staticClass: "btn btn-primary",
-        attrs: { type: "submit", value: "Enviar mensaje" }
+        attrs: { id: "enviar", type: "submit", value: "Enviar mensaje" }
       })
     ])
   }
@@ -49491,7 +49498,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/david/Escritorio/Onee-chan project/FKideas/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/david/Escritorio/FKideas/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

@@ -27,7 +27,7 @@
                 <div v-if="errors && errors.message" class="text-danger">{{ errors.message[0] }}</div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Enviar mensaje" class="btn btn-primary">
+                <input id="enviar" type="submit" value="Enviar mensaje" class="btn btn-primary">
             </div>
         </form>
     </div>
@@ -54,18 +54,25 @@ export default {
                 this.loaded = false;
                 this.success = false;
                 this.errors = {};
+                $('#enviar').val('Procesando...');
                 axios.post('formSubmit', this.fields)
                 .then( response => {
-                    this.fields = {};
-                    this.loaded = true;
-                    this.success = true;
-                    toastr.success('Su Mensaje ha sido enviado');
+                    setTimeout( () => {
+                        $('#enviar').val('Enviar Mensaje');
+                        this.fields = {};
+                        this.loaded = true;
+                        this.success = true;
+                    },1000);
                     $('#modalContactForm').modal('hide');
+                    toastr.success('Su Mensaje ha sido enviado');
                 })
                 .catch(error => {
                     this.loaded = false;
                     if (error.response.status === 422) {
                         this.errors = error.response.data.errors || {};
+                        setTimeout( () => {
+                            $('#enviar').val('Enviar Mensaje');
+                        },300);
                     }
                 });
             }
