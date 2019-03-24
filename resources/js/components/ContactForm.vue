@@ -57,7 +57,7 @@ export default {
                 $('#enviar').val('Procesando...');
                 axios.post('formSubmit', this.fields)
                 .then( response => {
-                    setTimeout( () => {
+                    setTimeout( function() {
                         $('#enviar').val('Enviar Mensaje');
                         this.fields = {};
                         this.loaded = true;
@@ -70,7 +70,7 @@ export default {
                     this.loaded = false;
                     if (error.response.status === 422) {
                         this.errors = error.response.data.errors || {};
-                        setTimeout( () => {
+                        setTimeout( function() {
                             $('#enviar').val('Enviar Mensaje');
                         },300);
                     }

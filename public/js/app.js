@@ -1825,9 +1825,9 @@ __webpack_require__.r(__webpack_exports__);
         axios.post('formSubmit', this.fields).then(function (response) {
           setTimeout(function () {
             $('#enviar').val('Enviar Mensaje');
-            _this.fields = {};
-            _this.loaded = true;
-            _this.success = true;
+            this.fields = {};
+            this.loaded = true;
+            this.success = true;
           }, 1000);
           $('#modalContactForm').modal('hide');
           toastr.success('Su Mensaje ha sido enviado');
