@@ -57,11 +57,11 @@ export default {
                 $('#enviar').val('Procesando...');
                 axios.post('formSubmit', this.fields)
                 .then( response => {
+                    this.fields = {};
+                    this.loaded = true;
+                    this.success = true;
                     setTimeout( function() {
                         $('#enviar').val('Enviar Mensaje');
-                        this.fields = {};
-                        this.loaded = true;
-                        this.success = true;
                     },1000);
                     $('#modalContactForm').modal('hide');
                     toastr.success('Su Mensaje ha sido enviado');
