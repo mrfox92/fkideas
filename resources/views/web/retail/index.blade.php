@@ -176,7 +176,7 @@
 <!-- card content retail -->
 <div class="row mt-5 mb-5">
     <div class="col-md-12">
-        <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos trabajos realizados</h2>
+        <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos Trabajos Realizados</h2>
     </div>
 </div>
 <div class="container-fluid">

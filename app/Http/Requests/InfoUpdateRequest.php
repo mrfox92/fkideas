@@ -27,7 +27,8 @@ class InfoUpdateRequest extends FormRequest
             'title' => 'required|max:128',
             'description' => 'required',
             'email' => 'required|max:128',
-            'contact_number' => 'required|max:20',
+            'mobile_number' => 'required|max:20',
+            'phone_number' => 'required|max:20',
             'location' => 'required|max:120',
         ];
     }
@@ -41,8 +42,10 @@ class InfoUpdateRequest extends FormRequest
             'description.required' => 'Debe ingresar una descripción',
             'email.required' => 'Debe ingresar una dirección de correo electrónico',
             'email.max' => 'Error al ingresar email, La dirección de correo no debe superar los 128 caracteres, reintente',
-            'contact_number.required' => 'Debe ingresar un número de contacto',
-            'contact_number.max' => 'Error al ingresar el número de contacto, ha introducido un número demasiado largo, reintente',
+            'mobile_number.required' => 'Debe ingresar un número de contacto(celular)',
+            'mobile_number.max' => 'Error al ingresar el número de contacto(celular), ha introducido un número demasiado largo, reintente',
+            'phone_number.required' => 'Debe ingresar un número de contacto(red fija)',
+            'phone_number.max' => 'Error al ingresar el número de contacto(red fija), ha introducido un número demasiado largo, reintente',
         ];
     }
 }

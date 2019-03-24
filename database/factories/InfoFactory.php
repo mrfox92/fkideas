@@ -9,7 +9,8 @@ $factory->define(App\Info::class, function (Faker $faker) {
         'title' => $title,
         'description' => $faker->text(120),
         'email' => $faker->unique()->safeEmail,
-        'contact_number' => '+569 12345678',
+        'mobile_number' => '56912345678',
+        'phone_number' => '0224213146',
         'location' => $faker->text(100),
 
     ];

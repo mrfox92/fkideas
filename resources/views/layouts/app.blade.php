@@ -187,7 +187,10 @@
 
                 <ul class="list-unstyled text-center">
                     <li>
-                        <span><i class="fas fa-phone-square"></i> {{ $info->contact_number }}</span>
+                        <span><i class="fas fa-mobile-alt"></i> +{{ $info->mobile_number }}</span>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-phone"></i> {{ $info->phone_number }}</span>
                     </li>
                     <li>
                         <span><i class="far fa-envelope"></i> {{ $info->email }}</span>

@@ -18,7 +18,8 @@ class CreateInfosTable extends Migration
             $table->string('title', 128);
             $table->text('description');
             $table->string('email', 128)->unique();
-            $table->string('contact_number');
+            $table->string('mobile_number');
+            $table->string('phone_number');
             $table->string('location');
             $table->unsignedInteger('user_id');
             $table->timestamps();
