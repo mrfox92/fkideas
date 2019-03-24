@@ -86,7 +86,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-3" id="texto-muebleria">
                     <div class="card-body text-justify">
-                        Fabricamos muebles que expresan tu identidad única
+                        <p><strong>Fabricamos</strong> <strong>muebles</strong> que expresan tu identidad única</p>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse" id="texto-oficina-linea-plana">
                     <div class="card-body text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates recusandae quae quia aliquam quibusdam, ut quas quam iusto doloribus itaque vero assumenda cum maiores non illo delectus. Temporibus, nisi!</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-1" id="texto-acrilico-vidrio">
                     <div class="card-body text-justify">
-                        Maestros expertos en acabados de calidad
+                        <p>Maestros expertos en acabados de calidad</p>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="texto-acero">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-4" id="texto-store">
                     <div class="card-body text-justify">
-                        Diseñamos y remodelamos el mejor espacio para tu público
+                        <p>Diseñamos y remodelamos el mejor espacio para tu público</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-5" id="texto-stand">
                     <div class="card-body text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta debitis fugit, dolorem possimus eius aut dolores perspiciatis nemo nam animi modi! Voluptas sint iusto quasi laudantium repellat modi mollitia?</p>
                     </div>
                 </div>
             </div>

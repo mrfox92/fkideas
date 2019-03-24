@@ -65,7 +65,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-3" id="texto-1">
                     <div class="card-body text-justify">
-                        Somos el aliado para impulsar tu marca o producto
+                        <p>Somos el aliado para impulsar tu marca o producto</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse" id="texto-2">
                     <div class="card-body text-justify">
-                        Estrategias 2.0 para tu público objetivo
+                        <p>Estrategias 2.0 para tu público objetivo</p>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="texto-4">
                     <div class="card-body text-justify">
-                        Creamos experiencias pensando en los usuarios
+                        <p>Creamos experiencias pensando en los usuarios</p>
                     </div>
                 </div>
             </div>
