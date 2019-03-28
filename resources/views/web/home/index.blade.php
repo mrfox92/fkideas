@@ -63,8 +63,8 @@
             <p class="h4-responsive text-justify">
                 Somos especialistas en proyectos mobiliarios, creamos productos que
                 construyen espacios más agradables y eficientes. Nuestro objetivo es crear
-                experiencias únicas en tus ambientes. Diseñamos tus espacios y te ofrece-
-                mos la mejor opción según tus necesidades.
+                experiencias únicas en tus ambientes. Diseñamos tus espacios y te ofrecemos
+                la mejor opción según tus necesidades.
             </p>
             <div class="text-center text-white mt-4 mb-4 wow fadeInUp">
                 <a href="{{ route('muebleria_retail') }}" class="btn btn-outline-white btn-lg">Ver más

@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
 </head>
 <body>
-    <div id="app">
+<div id="app">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
             <div class="container-fluid">
                 <a class="navbar-item" href="{{ url('/') }}">
@@ -147,7 +147,7 @@
             </div>
         </nav>
         <!-- modal contacto -->
-        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="modalContactForm"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -160,7 +160,7 @@
                 <contact-form></contact-form>
                 </div>
             </div>
-            </div>
+        </div>
         <!-- fin modal contacto -->
         <main class="py-0">
             @yield('content')
@@ -208,7 +208,7 @@
             <!-- Grid column -->
             <div class="col-md-4 mt-2 mb-4 align-self-center">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.8086588523674!2d-70.65842458504254!3d-33.402155802420964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c677949cbed5%3A0xb0e65a528b68d410!2sEl+Roble+1142%2C+Recoleta%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1552099003616" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.8086588523674!2d-70.65842458504254!3d-33.402155802420964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c677949cbed5%3A0xb0e65a528b68d410!2sEl+Roble+1142%2C+Recoleta%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1552099003616" width="600" height="450" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
             <!-- Grid column -->
@@ -225,7 +225,7 @@
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
-    </div>
+</div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>

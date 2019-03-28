@@ -1,5 +1,8 @@
 /node_modules
 /public/hot
+/storage/app/public/retailers
+/storage/app/public/remodelaciones_construcciones
+/storage/app/public/aseos_industriales
 /vendor
 .env
 .phpunit.result.cache

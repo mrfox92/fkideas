@@ -108,17 +108,16 @@
         <h2 class="h3-responsive text-center font-weight-bold wow fadeInUp mt-5 mb-5">Últimos Trabajos Realizados</h2>
     </div>
 </div>
-<div class="row">
+<div class="card-columns">
     @foreach ( $aseos_industriales as $aseo_industrial)
-    <div class="col-lg-4 col-md-6 mt-4 mb-5">
-        <a class="card card-image wow fadeInUp grey-text" data-fancybox="gallery" data-caption="{{ $aseo_industrial->description }}" href="{{ asset( $aseo_industrial->file ) }}">
-            <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $aseo_industrial->title }}</strong></h3>
-            <img class="img-fluid" src="{{ asset( $aseo_industrial->file ) }}" alt="{{ $aseo_industrial->title }}"/>
-        </a>
-    </div>
+    <a class="card card-image wow fadeInUp grey-text mt-2 mb-2" data-fancybox="gallery" data-caption="{{ $aseo_industrial->description }}" href="{{ asset( $aseo_industrial->file ) }}">
+        <h3 class="h4-responsive text-center card-title mt-4 ml-2 mr-2"><strong>{{ $aseo_industrial->title }}</strong></h3>
+        <h6 class="h6-responsive text-center card-title ml-2 mr-2"><i class="fas fa-map-marker-alt"></i> <strong>{{ $aseo_industrial->location }}</strong></h6>
+        <img class="img-fluid" src="{{ asset( $aseo_industrial->file ) }}" alt="{{ $aseo_industrial->title }}"/>
+    </a>
     @endforeach
 </div>
-<div class="row">
+<div class="row mt-5">
     <div class="col-md-12">
         {{ $aseos_industriales->render() }}
     </div>

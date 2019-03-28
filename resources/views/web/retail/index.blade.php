@@ -180,16 +180,16 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="card-columns">
         @foreach ( $retailers as $id => $retail)
-        <div class="col-md-4 col-ms-6 col-12 mt-4 mb-5">
             @foreach( $retail->images as $key => $image )
                 @if( $key === 0 )
-                    <a class="card card-image wow fadeInUp grey-text" href="{{ asset( $image->path ) }}" 
+                    <a class="card card-image wow fadeInUp grey-text mt-2 mb-2" href="{{ asset( $image->path ) }}" 
                     data-fancybox="images-preview{{ $id }}"
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $retail->description }}">
-                        <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $retail->title }}</strong></h3>
+                        <h3 class="h4-responsive text-center card-title mt-4 ml-2 mr-2"><strong>{{ $retail->title }}</strong></h3>
+                        <h6 class="h6-responsive text-center card-title ml-2 mr-2"><i class="fas fa-map-marker-alt"></i> <strong>{{ $retail->location }}</strong></h6>
                         <img class="img-fluid" src="{{ asset( $image->path ) }}" alt="{{ $retail->title }}"/>
                     </a>
                 @else
@@ -201,11 +201,10 @@
                     </div>
                 @endif
             @endforeach
-        </div>
         @endforeach
     </div>
 </div>
-<div class="row">
+<div class="row mt-5">
     <div class="col-md-12">
         {{ $retailers->render() }}
     </div>

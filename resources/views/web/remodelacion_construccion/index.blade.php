@@ -65,7 +65,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-3" id="texto-1">
                     <div class="card-body text-justify">
-                        <p>Somos el aliado para impulsar tu marca o producto</p>
+                        <p>Somos el aliado para impulsar tu marca o producto.</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse" id="texto-2">
                     <div class="card-body text-justify">
-                        <p>Estrategias 2.0 para tu público objetivo</p>
+                        <p>Estrategias 2.0 para tu público objetivo.</p>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="col-md-6 col-12">
                 <div class="collapse multi-collapse-2" id="texto-4">
                     <div class="card-body text-justify">
-                        <p>Creamos experiencias pensando en los usuarios</p>
+                        <p>Creamos experiencias pensando en los usuarios.</p>
                     </div>
                 </div>
             </div>
@@ -114,16 +114,16 @@
 </div>
 <!-- lightbox projects-->
 <div class="container-fluid">
-    <div class="row">
+    <div class="card-columns">
         @foreach ( $remodelaciones_construcciones as $id => $remodelacion_construccion)
-        <div class="col-md-4 col-ms-6 col-12 mt-4 mb-5">
             @foreach( $remodelacion_construccion->images as $key => $image )
                 @if( $key === 0 )
-                    <a class="card card-image wow fadeInUp grey-text" href="{{ asset( $image->path ) }}" 
+                    <a class="card card-image wow fadeInUp grey-text mt-2 mb-2" href="{{ asset( $image->path ) }}" 
                     data-fancybox="images-preview{{ $id }}"
                     data-thumbs='{"autoStart":true}'
                     data-caption="{{ $remodelacion_construccion->description }}">
-                        <h3 class="h4-responsive font-weight-bold text-center card-title py-4"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
+                        <h3 class="h4-responsive text-center card-title mt-4 ml-2 mr-2"><strong>{{ $remodelacion_construccion->title }}</strong></h3>
+                        <h6 class="h6-responsive text-center card-title ml-2 mr-2"><i class="fas fa-map-marker-alt"></i> <strong>{{ $remodelacion_construccion->location }}</strong></h6>
                         <img class="img-fluid" src="{{ asset( $image->path ) }}" alt="{{ $remodelacion_construccion->title }}"/>
                     </a>
                 @else
@@ -135,12 +135,11 @@
                     </div>
                 @endif
             @endforeach
-        </div>
         @endforeach
     </div>
 </div>
 <!-- fin lightbox projects -->
-<div class="row">
+<div class="row mt-5">
     <div class="col-md-12">
         {{ $remodelaciones_construcciones->render() }}
     </div>
