@@ -60,7 +60,7 @@
 <section class="container-fluid bg-section-muebleria pt-4 pb-4">
     <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-5 mb-4">
         <div class="col-md-10">
-            <p class="h4-responsive text-justify">
+            <p class="h5-responsive text-justify">
                 Somos especialistas en proyectos mobiliarios, creamos productos que
                 construyen espacios más agradables y eficientes. Nuestro objetivo es crear
                 experiencias únicas en tus ambientes. Diseñamos tus espacios y te ofrecemos
@@ -96,7 +96,7 @@
 <section class="container-fluid bg-section-muebleria pt-4 pb-4">
     <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-5 mb-4">
         <div class="col-md-10">
-            <p class="h4-responsive text-justify">
+            <p class="h5-responsive text-justify">
                 Ofrecemos soluciones en limpieza, contamos con equipos de excelencia y elementos
                 apropiados para todo tipo de trabajos. Somos una empresa confiable, comprometida con su
                 trabajo y clientes, garantizamos un servicio de calidad detallado, profesional,
@@ -132,7 +132,7 @@
 <section class="container-fluid bg-section-remodelacion pt-4 pb-4">
     <div class="row d-flex justify-content-center align-items-center wow fadeInUp mt-5 mb-4">
         <div class="col-md-10">
-            <p class="h4-responsive text-justify">
+            <p class="h5-responsive text-justify">
                 Nuestra estrategia radíca en conocer cada negocio en profundidad y al detalle, nos comprometemos con tu idea. Te brindamos y garantizamos las mejores soluciones acordes a tu proyecto.
             </p>
             <div class="text-center text-white mt-4 mb-4 wow fadeInUp">
@@ -143,11 +143,6 @@
         </div>
     </div>
 </section>
-<!-- sección parallax final página -->
-<!-- <section class="view parallax-contact-bg" style="background-image: url({{ asset('storage/images/fondo.jpg')}});">
-    <div class="mask flex-center rgba-dark-light d-flex justify-content-center align-items-center">
-    </div>
-</section> -->
 <section data-spy="scroll" data-target="#menu" data-offset="1">
     <div id="nosotros" class="view parallax-servicios-bg" style="background-image: url({{ asset('storage/images/cliente.jpeg')}});">
         <div class="mask flex-center rgba-black-light">
@@ -171,7 +166,7 @@
     </div>    
 </section>
 <!-- inicio clientes marcas asociadas -->
-<article class="container-fluid mt-0 mb-4">
+<section class="container-fluid mt-0 mb-4">
     <div class="row d-flex justify-content-center align-items-center mt-4 mb-5">
         <div class="col-md-12 mt-5 mb-4">
             <h2 class="h2-responsive text-center font-weight-bold wow fadeIn">Clientes que han confiado</h2>
@@ -196,6 +191,6 @@
         </div>
     </div>
     <!-- logos empresas y clientes -->
-</article>
+</section>
 <!-- fin clientes marcas asociadas -->
 @endsection
