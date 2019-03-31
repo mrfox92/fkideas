@@ -23,8 +23,9 @@ Route::get('profile', 'Admin\ProfileController@index')->name('perfil')->middlewa
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('login', 'Auth\LoginController@login');
+//añadida ruta get logout
 $this->post('logout', 'Auth\LoginController@logout')->name('logout');
-
+$this->get('logout', 'Auth\LoginController@logout')->name('logout');
 // Registration Routes...
 $this->get('registro', 'Auth\RegisterController@showRegistrationForm')->name('registro');
 $this->post('register', 'Auth\RegisterController@register');
@@ -46,7 +47,6 @@ Route::get('servicio-muebleria-retail', 'Web\MuebleriaRetailController@index')->
 Route::get('servicio-aseo-industrial', 'Web\AseoIndustrialController@index')->name('aseo_industrial');
 Route::get('servicio-remodelacion-y-construccion', 'Web\RemodelacionConstruccionController@index')
     ->name('remodelacion_construccion');
-Route::get('nosotros', 'Web\NosotrosController@index')->name('nosotros');
 Route::post('formSubmit', 'Web\ContactoController@formSubmit');
 
 /* routes resources, middleware auth group and permissions*/

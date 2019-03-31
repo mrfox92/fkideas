@@ -24,9 +24,9 @@
     <!-- Fancybox css -->
     <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
 </head>
-<body>
-<div id="app">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
+<body data-spy="scroll" data-target="#menu">
+<div id="app" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+        <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
             <div class="container-fluid">
                 <a class="navbar-item" href="{{ url('/') }}">
                     <img class="nav-link logo" src="{{ asset('storage/images/logo-1.png') }}" alt="logo fkideas">
@@ -58,11 +58,6 @@
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase font-weight-bold" href="{{ route('remodelacion_construccion') }}">
                                     Remodelación y construcción
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase font-weight-bold" href="{{ route('nosotros') }}">
-                                    Nosotros
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -166,7 +161,7 @@
             @yield('content')
         </main>
 <!-- Footer -->
-<footer class="page-footer font-small bg-footer pt-4">
+<footer class="page-footer font-small bg-footer mt-0">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">

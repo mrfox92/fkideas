@@ -4,6 +4,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 .success-info {
     position: absolute;
     z-index: 1000;
@@ -89,7 +93,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 60vh;
+    height: 100vh;
     margin-top: 0px !important;
 }
 
@@ -132,6 +136,12 @@
 .bg-section-remodelacion {
     background: rgb(21.7%, 21.7%, 31.6%);
     color: white;
+}
+
+.bg-section-nosotros {
+    background: rgb(21.7%, 21.7%, 31.6%);
+    color: white;
+    padding-top: 2em;
 }
 
 .login {
