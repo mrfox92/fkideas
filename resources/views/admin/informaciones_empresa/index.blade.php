@@ -43,10 +43,11 @@
                         <thead>
                             <tr class="text-center">
                                 <th class="text-center">Título</th>
-                                <th class="d-none d-lg-table-cell">Descripción</th>
-                                <th class="d-none d-lg-table-cell">Email</th>
-                                <th class="d-none d-lg-table-cell">N° contacto</th>
-                                <th>Dirección</th>
+                                <th class="d-none d-lg-table-cell"><i class="far fa-file-alt"></i> Descripción</th>
+                                <th class="d-none d-lg-table-cell"><i class="fas fa-envelope"></i> Email</th>
+                                <th class="d-none d-lg-table-cell"><i class="fas fa-mobile-alt"></i> celular</th>
+                                <th class="d-none d-lg-table-cell"><i class="fas fa-phone"></i> fijo</th>
+                                <th><i class="fas fa-map-marker-alt"></i> Dirección</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +56,8 @@
                                 <td>{{ $info->title }}</td>
                                 <td class="d-none d-lg-table-cell">{{ $info->description }}</td>
                                 <td class="d-none d-lg-table-cell">{{ $info->email }}</td>
-                                <td class="d-none d-lg-table-cell">{{ $info->contact_number }}</td>
+                                <td class="d-none d-lg-table-cell">{{ $info->mobile_number }}</td>
+                                <td class="d-none d-lg-table-cell">{{ $info->phone_number }}</td>
                                 <td >{{ $info->location }}</td>
                                 <td>
                                     @can('info.show')
