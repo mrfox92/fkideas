@@ -4,10 +4,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    position: relative;
-}
-
 .success-info {
     position: absolute;
     z-index: 1000;
@@ -78,30 +74,18 @@ body {
 
 /* estilos nosotros */
 
-.parallax-nosotros-header,
-.parallax-contact-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
-}
-
 .parallax-servicios-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
-    margin-top: 0px !important;
+    height: 60vh;
 }
 
 
 /* estilos aseo industrial */
 
-.parallax-aseo-industrial-bg,
-.parallax-contacto-bg {
+.parallax-aseo-industrial-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -141,7 +125,6 @@ body {
 .bg-section-nosotros {
     background: rgb(21.7%, 21.7%, 31.6%);
     color: white;
-    padding-top: 2em;
 }
 
 .login {
@@ -195,13 +178,6 @@ footer {
 .servicios-remodelacion-construccion .iconos:hover {
     transform: scale(1.1);
     box-shadow: 2px 4px 3px rgba(32, 32, 32, 0.658);
-}
-
-
-/* Estilos íconos clientes servicios nosotros*/
-
-.clientes-servicios-nosotros i {
-    font-size: 6vw;
 }
 
 

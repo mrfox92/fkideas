@@ -24,9 +24,9 @@
     <!-- Fancybox css -->
     <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
 </head>
-<body data-spy="scroll" data-target="#menu">
+<body>
 <div id="app" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
-        <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-menu scrolling-navbar">
             <div class="container-fluid">
                 <a class="navbar-item" href="{{ url('/') }}">
                     <img class="nav-link logo" src="{{ asset('storage/images/logo-1.png') }}" alt="logo fkideas">
@@ -169,7 +169,7 @@
         <!-- Grid row -->
         <div class="row">
             <!-- Grid column -->
-            <div class="col-md-4 d-flex justify-content-center align-self-center">
+            <div class="col-md-4 d-flex justify-content-center align-self-center mt-2">
                 <img class="nav-link logo" src="{{ asset('storage/images/logo-1.png') }}" alt="logo fkideas">
             </div>
             <!-- Grid column -->
