@@ -156,10 +156,9 @@
 </section>
 <!-- inicio clientes marcas asociadas -->
 <article class="container-fluid mt-0 mb-4">
-    <div class="row d-flex justify-content-center align-items-center mt-4 mb-5">
-        <div class="col-md-12 mt-5 mb-4">
-            <h2 class="h2-responsive text-center font-weight-bold wow fadeIn">Clientes que han confiado</h2>
-            <hr class="bottom-client wow fadeInLeft">
+    <div class="row d-flex justify-content-center align-items-center mt-4 mb-2">
+        <div class="col-md-12 d-flex justify-content-center align-items-center mt-5 mb-2">
+            <h2 class="h2-responsive text-center font-weight-bold wow fadeInUp">Nuestros Clientes</h2>
         </div>
     </div>
     <br>

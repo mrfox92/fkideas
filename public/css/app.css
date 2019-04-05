@@ -28,7 +28,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
     margin-top: 0px !important;
 }
@@ -40,7 +39,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
     margin-top: 0px !important;
 }
@@ -53,7 +51,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
     margin-top: 0px !important;
 }
@@ -66,7 +63,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
     margin-top: 0px !important;
 }
@@ -78,7 +74,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 60vh;
 }
 
@@ -89,7 +84,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
     margin-top: 0px !important;
 }
@@ -178,16 +172,6 @@ footer {
 .servicios-remodelacion-construccion .iconos:hover {
     transform: scale(1.1);
     box-shadow: 2px 4px 3px rgba(32, 32, 32, 0.658);
-}
-
-
-/* hr nosotros */
-
-.bottom-client {
-    width: 25%;
-    height: 1px;
-    margin: 0px auto;
-    background-color: rgba(76, 76, 76, 0.685);
 }
 
 
