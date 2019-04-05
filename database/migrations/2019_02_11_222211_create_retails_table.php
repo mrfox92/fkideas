@@ -20,11 +20,7 @@ class CreateRetailsTable extends Migration
             $table->text('description');
             $table->string('location', 128);
             $table->enum('status', ['PUBLICADO', 'BORRADOR'])->default('BORRADOR');
-            $table->unsignedInteger('user_id');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
         });
     }
 

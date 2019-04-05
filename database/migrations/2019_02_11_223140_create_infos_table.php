@@ -21,11 +21,7 @@ class CreateInfosTable extends Migration
             $table->string('mobile_number');
             $table->string('phone_number');
             $table->string('location');
-            $table->unsignedInteger('user_id');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
         });
     }
 

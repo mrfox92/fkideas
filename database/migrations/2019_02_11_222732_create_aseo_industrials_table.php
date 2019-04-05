@@ -20,11 +20,7 @@ class CreateAseoIndustrialsTable extends Migration
             $table->string('location', 128);
             $table->enum('status', ['PUBLICADO', 'BORRADOR'])->default('BORRADOR');
             $table->string('file', 128);
-            $table->unsignedInteger('user_id');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
         });
     }
 

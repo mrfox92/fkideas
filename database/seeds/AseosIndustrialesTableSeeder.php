@@ -11,6 +11,6 @@ class AseosIndustrialesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\AseoIndustrial::class, 20)->create();
+        /* factory(App\AseoIndustrial::class, 20)->create(); */
     }
 }

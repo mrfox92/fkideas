@@ -11,6 +11,6 @@ class RetailImagesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\RetailImages::class, 60)->create();
+        //factory(App\RetailImages::class, 60)->create();
     }
 }

@@ -11,6 +11,6 @@ class RetailsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Retail::class, 20)->create();
+        //factory(App\Retail::class, 20)->create();
     }
 }

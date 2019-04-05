@@ -38,7 +38,7 @@
     @endif
     <nav class="row d-flex justify-content-around align-item-center mt-4 mb-5">
         <a class="btn btn-success" href="{{ route('remodelacion_construccion.index') }}"><i class="fas fa-hand-point-left"></i> Volver</a>
-        @can('remodelacion.images.create')
+        @can('remodelacion_construccion.images.create')
         <a class="btn btn-primary" href="{{ route('remodelacion_construccion.images.create', $remodelacion->id) }}">Agregar <i class="fas fa-plus"></i></a>
         @endcan
     </nav>

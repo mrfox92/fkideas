@@ -11,6 +11,6 @@ class RemodelacionesConstruccionesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\RemodelacionConstruccion::class, 20)->create();
+        //factory(App\RemodelacionConstruccion::class, 20)->create();
     }
 }
